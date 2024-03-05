@@ -1,0 +1,53 @@
+.container {
+    background-color: #000000;
+    opacity: 0.75;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 17% 20px 17%;
+    text-align: center;
+    font-size: 13px;
+    margin-top: auto;
+    height: 50px;
+    min-width: 1000px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.logo img {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.content span {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.youtube {
+    margin-left: 20px;
+    width: 30px;
+}
+
+.instagram {
+    margin-left: 10px;
+    width: 25px;
+}
+
+.github {
+    margin-left: 10px;
+    width: 23px;
+}

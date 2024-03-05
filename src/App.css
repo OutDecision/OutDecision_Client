@@ -2,37 +2,47 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link {
+  text-decoration: none;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexbox {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flexbox2 {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.pagination {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  margin-left: 24%;
+  gap: 0.7rem;
+  list-style: none;
+}
+
+.pagination_link {
+  transition: all 0.25s;
+  padding: 0.2rem 0.6rem;
+}
+
+.pagination_active_link {
+  text-decoration-line: underline;
+  color: #ac2323;
+  font-weight: 600;
+}
+
+
+.react-datepicker-popper {
+  transform: translate(250px, 840px) !important;
+}
+
+.react-datepicker__input-container input {
+  padding: 7px !important;
+  width: 120px !important;
 }

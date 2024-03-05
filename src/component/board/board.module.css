@@ -1,0 +1,119 @@
+.container {
+    min-height: calc(100vh - 50px);
+    padding: 20px 17% 50px 17%;
+}
+
+.decoration {
+    font-weight: 1000;
+    font-size: 33px;
+}
+
+.boardtitle {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ac2323;
+    margin: 25px 0 25px 0;
+}
+
+.boardnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px 20px 0;
+    min-width: 900px;
+}
+
+.all {
+    margin-right: 10px;
+    width: 95px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #ac2323;
+    border: none;
+}
+
+.hot {
+    width: 95px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    border: 2px solid gray;
+}
+
+.voteoption {
+    border: 2px solid black;
+    font-weight: 600;
+    width: 75px;
+    margin-right: 20px;
+    padding-left: 5px;
+}
+
+.write {
+    background-color: white;
+    border: 2px solid #ac2323;
+    font-weight: 600;
+    width: 75px;
+}
+
+.posthead {
+    background-color: #f7f7f7;
+    min-width: 1000px;
+}
+
+.posttable {
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.posttable th {
+    border-top: 2px solid #ac2323;
+    border-bottom: 1px solid #ac2323;
+    padding: 10px 0 10px 0;
+}
+
+.posttable td:not(:nth-child(3)){
+    text-align: center;
+}
+
+.posttable td {
+    padding: 10px 5px 10px 5px;
+    border-bottom: 1px solid lightgray;
+}
+
+.searchbox {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    width: 160px;
+    height: 23px;
+}
+
+.searchbar {
+    position: relative;
+}
+
+.searchbar input {
+    padding-left: 8px;
+    height: 30px;
+    width: 200px;
+}
+
+.searchbar img {
+    position: absolute;
+    width: 15px;
+    right: 8px;
+    bottom: 10px;
+}
+
+.searchoption {
+    border: 2px solid lightgray;
+    width: 100px;
+    margin-left: 20px;
+    padding-left: 5px;
+    background-color: #f7f7f7;
+}

@@ -1,0 +1,82 @@
+.container {
+    margin: 1% 30% 0 30%;
+    padding: 2% 5% 2% 5%;
+    min-height: calc(100vh - 50px);
+}
+
+.signupform {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.namebox {
+    display: flex;
+    justify-content: space-between;
+    width: 455px;
+}
+
+.formName {
+    font-size: 13px;
+    color: gray;
+}
+
+.formValue {
+    width: 445px;
+    height: 40px;
+    margin: 2% 0 4% 0;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    background-color: ghostwhite;
+    font-size: 14px;
+}
+
+.formValue2 {
+    width: 200px;
+    height: 40px;
+    margin: 2% 0 4% 0;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    background-color: ghostwhite;
+    font-size: 14px;
+}
+
+.signupButton {  
+    width: 458px;
+    height: 40px;
+    margin: 3% 0 8% 0;
+    border: none;
+    background-color:#ac2323;
+    color: white;
+}
+
+.social {
+    width: 458px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid gray;
+}
+
+.google {
+    width: 223px;
+    border: 3px solid #ac2323;
+    height: 32px;
+    background-color: white;
+    color: #ac2323;
+}
+
+.signup {
+    padding-top: 40px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ac2323;
+}
