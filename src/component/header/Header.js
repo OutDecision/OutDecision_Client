@@ -35,7 +35,7 @@ function Header() {
                 </div>
                 <div className={styles.rightMenu}>
                     <span>전체</span>
-                    <span>포인트랭킹</span>
+                    <Link to="/ranking" className={styles.rankinglink}><span>포인트랭킹</span></Link>
                 </div>
             </div>
         </>

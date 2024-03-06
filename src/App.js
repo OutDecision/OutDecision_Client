@@ -9,6 +9,7 @@ import Signup from "./component/signup/Signup";
 import Board from "./component/board/Board";
 import Postup from "./component/postup/Postup";
 import PostView from "./component/postview/PostView";
+import Ranking from "./component/ranking/Ranking";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/board/:name" element={<Board />}></Route>
         <Route path="/board/postup/:name" element={<Postup />}></Route>
         <Route path="/board/view/:id" element={<PostView />}></Route>
+        <Route path="/ranking" element={<Ranking />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
