@@ -15,6 +15,11 @@
     margin: 25px 0 25px 0;
 }
 
+.link {
+    text-decoration: none;
+    color: #ac2323;
+}
+
 .postinfo {
     display: flex;
     flex-direction: column;

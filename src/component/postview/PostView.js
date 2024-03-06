@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./postview.module.css";
+import { Link } from "react-router-dom";
 
 function PostView () {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ function PostView () {
     return (
         <div className={styles.container}>
             <div className="flexbox">
-                <div className={styles.boardtitle}><span className={styles.decoration}>|</span>음식</div>
+                <div className={styles.boardtitle}><span className={styles.decoration}>|</span><Link className={styles.link} to="/board/food">음식</Link></div>
                 <div className={styles.postinfo}>
                     <div className={styles.titlebox}>
                         <div className={styles.title}>둘 중에 뭐가 더 나아?</div>
