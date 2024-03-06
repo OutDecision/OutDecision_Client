@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./postview.module.css";
 
 function PostView () {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleButtonClick = () => {
+        setIsOpen(!isOpen);
+    }
+
+    const handleBlur = () => {
+        setTimeout(() => {
+            setIsOpen(false);
+        }, 200);
+    }
+
     return (
         <div className={styles.container}>
             <div className="flexbox">
@@ -21,22 +33,33 @@ function PostView () {
                         </div>
                     </div>
                 </div>
-                <div className={styles.votebox}>
-                    <div className={styles.votetitlebox}>
-                        <div className={styles.votetitle}>골라줘</div>
-                        <div>2024-03-06 00:00 까지</div>
+                <div className={styles.contentbox}>
+                    <div className={styles.dropdown} onBlur={handleBlur}>
+                        <button onClick={handleButtonClick}>⋮</button>
+                        {isOpen && (
+                            <div className={styles.postoption}>
+                                <option>수정</option>
+                                <option>삭제</option>
+                            </div>
+                        )}
                     </div>
-                    <div className={styles.optionbox}>
-                        <button className={styles.optionbutton}>초록색 니트 <img src="/assets/cloth.png" alt="옵션 1"/>  </button>                                         
-                        <button className={styles.optionbutton}>파란색 맨투맨 <img src="/assets/cloth.png" alt="옵션 2"/> </button>
-                        <button className={styles.optionbutton}>둘다 별로</button>
-                        <button className={styles.votebutton}>투표하기</button>
+                    <div className={styles.votebox}>
+                        <div className={styles.votetitlebox}>
+                            <div className={styles.votetitle}>골라줘</div>
+                            <div>2024-03-06 00:00 까지</div>
+                        </div>
+                        <div className={styles.optionbox}>
+                            <button className={styles.optionbutton}>초록색 니트 <img src="/assets/cloth.png" alt="옵션 1"/>  </button>                                         
+                            <button className={styles.optionbutton}>파란색 맨투맨 <img src="/assets/cloth.png" alt="옵션 2"/> </button>
+                            <button className={styles.optionbutton}>둘다 별로</button>
+                            <button className={styles.votebutton}>투표하기</button>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.content}>옷 살건데 뭐사는게 좋을까ㅠㅠ</div>
-                <div className={styles.likebox}>
-                    <button className={styles.like}>❤️ 좋아요 <span>0</span></button>
-                    <button className={styles.pullup}>🔥 끌어올리기 <span>0</span></button>
+                    <div className={styles.content}>옷 살건데 뭐사는게 좋을까ㅠㅠ</div>
+                    <div className={styles.likebox}>
+                        <button className={styles.like}>❤️ 좋아요 <span>0</span></button>
+                        <button className={styles.pullup}>🔥 끌어올리기 <span>0</span></button>
+                    </div>
                 </div>
                 <div className={styles.writecomment}>
                     <div>댓글 작성</div>
