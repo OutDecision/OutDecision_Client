@@ -65,7 +65,9 @@ function Postup () {
                     <div className={styles.options} key={index}>
                         <input type="text" value={options[index].text} onChange={(e) => handleTextUpload(e, index)} placeholder={`보기${index + 1}`}/>
                         <div class={styles.filebox}>
-                            <input type="file" onChange={(e) => handleImageUpload(e, index)} accept=".png,.jpg" />
+                            <label for={`file-${index}`}>사진첨부</label>
+                            <input id={`file-${index}`} type="file" onChange={(e) => handleImageUpload(e, index)} accept=".png,.jpg" />
+                            <div className={styles.filename}>{options[index].image}</div>
                         </div>
                     </div>
                 ))}

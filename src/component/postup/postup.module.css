@@ -72,6 +72,27 @@
 
 .filebox {
     width: 15%;
+    height: 39px;
+}
+
+.filebox label {
+    cursor: pointer;
+    display: inline-block;
+    background-color: #ADA9A9;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.filebox input {
+    display: none;
+    white-space: nowrap;
+}
+
+.filename {
+    margin-left: 5px;
 }
 
 .add {
@@ -86,8 +107,8 @@
 
 .endbutton {
     display: flex;
-    width: 900px;
-    justify-content: right;
+    justify-content: flex-end;
+    width: 100%;
     margin-top: 20px;
 }
 
