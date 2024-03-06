@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from './board.module.css';
 import Pagination from "../pagination/Pagination";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Board() {
     const navigate = useNavigate();
@@ -58,7 +58,7 @@ function Board() {
                         <tr>
                             <td>1</td>
                             <td>투표중</td>
-                            <td>안녕하세요</td>
+                            <Link  className="link" to="/board/view/1"><td>안녕하세요</td></Link>
                             <td>패알못</td>
                             <td>18:09</td>
                             <td>101</td>

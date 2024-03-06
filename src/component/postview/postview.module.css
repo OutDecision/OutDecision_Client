@@ -1,0 +1,247 @@
+.container {
+    min-height: calc(100vh - 50px);
+    padding: 20px 17% 50px 17%;
+}
+
+.decoration {
+    font-weight: 1000;
+    font-size: 33px;
+}
+
+.boardtitle {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ac2323;
+    margin: 25px 0 25px 0;
+}
+
+.postinfo {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #ac2323;
+    border-bottom: 1px solid #ac2323;
+    padding: 13px 10px 13px 10px;
+    font-size: 18px;
+    background-color: #f7f7f7;
+    min-width: 980px;
+}
+
+.titlebox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.date {
+    margin-right: 10px;
+    color: #636363;
+}
+
+.namebox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.detail span {
+    margin-right: 13px;
+    color: #636363;
+}
+
+.votebox {
+    margin: 30px 0 0 10px;
+    width: 35%; 
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: #E3E3E3;
+}
+
+.votetitlebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #636363;
+    color: white;
+    
+    padding: 13px;
+    border-radius: 10px 10px 0 0;
+}
+
+.votetitle {
+    font-size: 20px;
+}
+
+.optionbox {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.optionbutton {
+    width: 2000;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+
+    background-color: white;
+    border-radius: 8px;
+    border-color: gray;
+    cursor: pointer;
+
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.optionbutton img {
+    margin-top: 5px;
+    width: 60%;
+    align-self: center;
+}
+
+.votebutton {
+    margin: 10px 0 10px 0;
+    width: 30%;
+    height: 40px;
+
+    border-radius: 8px;
+    border: none;
+
+    background-color: #ac2323;
+    color: white;
+    align-self: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.content {
+    margin: 20px 10px 30px 10px;
+}
+
+.likebox {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #636363;
+}
+
+.like {
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    border-color: #ac2323;
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.like span {
+    color: #ac2323;
+}
+
+.pullup {
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    border-color: #ac2323;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.pullup span {
+    color: #ac2323;
+}
+
+
+.writecomment {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: #E3E3E3;
+    margin: 30px 5px 20px 5px;
+    padding: 10px 20px 10px 20px;
+}
+
+.submitcomment {
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-between;
+}
+
+.submitcomment input {
+    width: 90%;
+    height: 60px;
+}
+
+.submitcomment button {
+    width: 7%;
+    background-color: #747373;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+.commentcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.commenttitle {
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #ac2323;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.commentbox {
+    margin: 10px 0 0 10px;
+}
+
+.commentinfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentwriter {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 10px 10px 0;
+}
+
+.commentwriter span {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    color:#747373;
+}
+
+.commentdelete {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.comment {
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #747373;
+    font-size: 18px;
+}
