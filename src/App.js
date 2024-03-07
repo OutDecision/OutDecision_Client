@@ -11,6 +11,7 @@ import Postup from "./component/postup/Postup";
 import PostView from "./component/postview/PostView";
 import Ranking from "./component/ranking/Ranking";
 import Mypage from "./component/mypage/Mypage";
+import InfoEdit from "./component/infoedit/InfoEdit";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/board/view/:id" element={<PostView />}></Route>
         <Route path="/ranking" element={<Ranking />}></Route>
         <Route path="/mypage" element={<Mypage />}></Route>
+        <Route path="/mypage/edit" element={<InfoEdit />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

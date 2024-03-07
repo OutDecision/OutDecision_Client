@@ -7,6 +7,10 @@
   color: black;
 }
 
+.link2 {
+  text-decoration: none;
+}
+
 .flexbox {
   display: flex;
   flex-direction: column;
