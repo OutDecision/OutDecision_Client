@@ -10,7 +10,7 @@ function Board() {
     const handlePageChange = ({ selected }) => {
         setCurrentPage(selected);
         window.scrollTo(0, 0); // 페이지 변경 시 스크롤을 맨 위로 이동
-      };
+    };
 
     return(
         <div className={styles.container}>

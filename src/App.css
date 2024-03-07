@@ -23,9 +23,9 @@
 
 .pagination {
   margin-top: 2rem;
-  width: 100%;
+  width: 92%;
   display: flex;
-  margin-left: 24%;
+  justify-content: center;
   gap: 0.7rem;
   list-style: none;
 }
