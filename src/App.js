@@ -10,6 +10,7 @@ import Board from "./component/board/Board";
 import Postup from "./component/postup/Postup";
 import PostView from "./component/postview/PostView";
 import Ranking from "./component/ranking/Ranking";
+import Mypage from "./component/mypage/Mypage";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/board/postup/:name" element={<Postup />}></Route>
         <Route path="/board/view/:id" element={<PostView />}></Route>
         <Route path="/ranking" element={<Ranking />}></Route>
+        <Route path="/mypage" element={<Mypage />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -58,7 +58,7 @@ function Board() {
                         <tr>
                             <td>1</td>
                             <td>투표중</td>
-                            <Link  className="link" to="/board/view/1"><td>안녕하세요</td></Link>
+                            <td><Link  className="link" to="/board/view/1">안녕하세요</Link></td>
                             <td>패알못</td>
                             <td>18:09</td>
                             <td>101</td>

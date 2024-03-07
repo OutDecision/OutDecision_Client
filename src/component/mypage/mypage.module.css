@@ -1,0 +1,148 @@
+.container {
+    min-height: calc(100vh - 50px);
+    padding: 20px 17% 50px 17%;
+    display: flex;
+}
+
+.sidebar {
+    width: 30%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding: 20px;
+    border-top: 3px solid #ac2323;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #f7f7f7;
+    color: #ac2323;
+    width: 65%;
+    text-align: center;
+}
+
+.select {
+    padding: 20px;
+    background-color: #ac2323;
+    width: 65%;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+}
+
+.unselected {
+    padding: 20px;
+    background-color: white;
+    color: gray;
+    font-size: 18px;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+}
+
+.main {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mypage {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ac2323;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ac2323;
+}
+
+.profile {
+    margin-top: 15px;
+    background-color: #f7f7f7;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagebox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imagebox img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.imagebox span:nth-child(1) {
+    font-size: 25px;
+}
+
+.imagebox span:nth-child(2) {
+    color: #468FD3;
+}
+
+.userinfo {
+    padding: 10px;
+    color:dimgray;
+}
+
+.userinfo span {
+    color: black;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.posting {
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.menu span {
+    margin-right: 15px;
+    padding: 6px;
+    color: gray;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.menu span:nth-child(1) {
+    border-bottom: 4px solid #ac2323;
+    color: #ac2323;
+}
+
+.postlist {
+    width: 100%;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    margin-top: 30px;
+    position: relative;
+}
+
+.plus {
+    position: absolute;
+    top: -30px;
+    right: 5px;
+    color: gray;
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.post div:nth-child(1){
+    font-size: 18px;
+}
+
+.post div:nth-child(1) span {
+    color: #ac2323;
+    font-weight: 600;
+}
+

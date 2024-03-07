@@ -1,0 +1,56 @@
+import React from "react";
+import styles from './mypage.module.css';
+
+function Mypage () {
+    return (
+        <div className={styles.container}>
+            <div className={styles.sidebar}>
+                <div className={styles.title}>마이페이지</div>
+                <div className={styles.select}>마이페이지 <span>▶</span></div>
+                <div className={styles.unselected}>개인정보수정 <span>▶</span></div>
+                <div className={styles.unselected}>게시글 <span>▶</span></div>
+                <div className={styles.unselected}>댓글 <span>▶</span></div>
+                <div className={styles.unselected}>좋아요한 글 <span>▶</span></div>
+            </div>
+            <div className={styles.main}>
+                <div className={styles.mypage}>마이페이지</div>
+                <div className={styles.profile}>
+                    <div className={styles.imagebox}>
+                        <img src="/assets/user.png" alt="프로필" />
+                        <div className="flexbox">
+                            <span>패알못 님</span>
+                            <span>aaa@naver.com</span>
+                        </div>
+                    </div>
+                    <div className={styles.userinfo}>가입일 <span>2024년 02월 19일</span></div>
+                    <div className={styles.userinfo}>포인트 <span>7000점 (랭킹 : 3위)</span></div>
+                    <div className={styles.userinfo}>끌어올리기 <span>14회</span></div>
+                </div>
+                <div className={styles.posting}>
+                    <div className={styles.menu}>
+                        <span>작성한 글</span>
+                        <span>작성한 댓글</span>
+                        <span>좋아요한 글</span>
+                    </div>
+                    <div className={styles.postlist}>
+                        <div className={styles.plus}>더보기</div>
+                        <div className={styles.post}>
+                            <div>게시글 제목입니다. <span>(8)</span></div>
+                            <div>패션 | 02-25</div>
+                        </div>
+                        <div className={styles.post}>
+                            <div>게시글 제목입니다. <span>(8)</span></div>
+                            <div>패션 | 02-25</div>
+                        </div>
+                        <div className={styles.post}>
+                            <div>게시글 제목입니다. <span>(8)</span></div>
+                            <div>패션 | 02-25</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Mypage;
