@@ -29,6 +29,12 @@ function Postup () {
         setOptions(updatedOptions);
     };
 
+    const handleSubmit = () => {
+        /*
+        서버에 작성한 글 보내기
+        */
+        navigate('/board/food');
+    }
     console.log(options);
 
     return (
@@ -74,7 +80,7 @@ function Postup () {
                 <button className={styles.add} onClick={()=> setCount(count + 1)}>항목 추가</button>
                 <div className={styles.endbutton}>
                     <button className={styles.cancle} onClick={()=> navigate(`/board/food`)}>취소</button>
-                    <button className={styles.submit}>등록</button>
+                    <button className={styles.submit} onClick={handleSubmit}>등록</button>
                 </div>
             </div>
         </div>

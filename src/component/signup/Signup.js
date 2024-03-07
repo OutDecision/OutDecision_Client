@@ -21,6 +21,10 @@ function Signup() {
                 <input className={styles.formValue} type="text" placeholder="Email" ></input>
                 <div className={styles.formName}>Password</div>
                 <input className={styles.formValue} type="password" placeholder="Password"></input>
+                <div className={styles.formName}>Phone Number</div>
+                <input className={styles.formValue} type="text" placeholder="Phone Number" ></input>
+                <div className={styles.formName}>Date of Birth</div>
+                <input className={styles.formValue} type="text" placeholder="Date of Birth" ></input>
                 <button className={styles.signupButton} >Sign up</button>
                 <div className={styles.social}>
                     <button className={styles.google}>Log in with Google</button>

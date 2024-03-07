@@ -12,6 +12,7 @@ import PostView from "./component/postview/PostView";
 import Ranking from "./component/ranking/Ranking";
 import Mypage from "./component/mypage/Mypage";
 import InfoEdit from "./component/infoedit/InfoEdit";
+import Mypost from "./component/mypost/Mypost";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/ranking" element={<Ranking />}></Route>
         <Route path="/mypage" element={<Mypage />}></Route>
         <Route path="/mypage/edit" element={<InfoEdit />}></Route>
+        <Route path="/mypage/posting" element={<Mypost />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
