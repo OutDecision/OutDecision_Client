@@ -24,8 +24,8 @@ function InfoEdit () {
                 <Link to="/mypage" className="link2"><div className={styles.unselected}>마이페이지 <span>▶</span></div></Link>
                 <Link to="/mypage/edit" className="link2"><div className={styles.select}>개인정보수정 <span>▶</span></div></Link>
                 <Link to="/mypage/posting" className="link2"><div className={styles.unselected}>게시글 <span>▶</span></div></Link>
-                <div className={styles.unselected}>댓글 <span>▶</span></div>
-                <div className={styles.unselected}>좋아요한 글 <span>▶</span></div>
+                <Link to="/mypage/comment" className="link2"><div className={styles.unselected}>댓글 <span>▶</span></div></Link>
+                <Link to="/mypage/liked" className="link2"><div className={styles.unselected}>좋아요한 글 <span>▶</span></div></Link>
             </div>
             <div className={styles.main}>
                 <div className={styles.edit}>개인정보수정</div>

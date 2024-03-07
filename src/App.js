@@ -13,6 +13,8 @@ import Ranking from "./component/ranking/Ranking";
 import Mypage from "./component/mypage/Mypage";
 import InfoEdit from "./component/infoedit/InfoEdit";
 import Mypost from "./component/mypost/Mypost";
+import Myliked from "./component/myliked/Myliked";
+import Mycomment from "./component/mycomment/Mycomment";
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
         <Route path="/mypage" element={<Mypage />}></Route>
         <Route path="/mypage/edit" element={<InfoEdit />}></Route>
         <Route path="/mypage/posting" element={<Mypost />}></Route>
+        <Route path="/mypage/comment" element={<Mycomment />}></Route>
+        <Route path="/mypage/liked" element={<Myliked />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
