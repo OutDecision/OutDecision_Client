@@ -56,26 +56,66 @@
     border: none;
     background-color:#ac2323;
     color: white;
-}
-
-.social {
-    width: 458px;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 40px;
     border-bottom: 1px solid gray;
 }
 
-.google {
-    width: 223px;
-    border: 3px solid #ac2323;
-    height: 32px;
-    background-color: white;
-    color: #ac2323;
+.kakao {
+    width: 458px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:gold;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
-.signup {
-    padding-top: 40px;
+.google {
+    width: 458px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4285F4;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.email {
+    width: 458px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.boundary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 458px;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+.boundary hr {
+    width: 200px;
+    margin: 0;
+}
+
+.loginbox {
+    padding-top: 20px;
+    border-top: 1px solid gray;
+    width: 458px;
+}
+
+.login {
+    margin-top: 40px;
     font-size: 14px;
     text-decoration: none;
     color: #ac2323;

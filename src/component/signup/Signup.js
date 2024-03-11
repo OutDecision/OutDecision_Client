@@ -1,36 +1,28 @@
 import React from "react";
 import styles from './signup.module.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Signup() {
+    const navigate = useNavigate();
+    const handleSoicalLogin = () => {
+        /*
+        소셜 로그인 처리 코드
+        */
+        navigate('/signup/social');
+    }
     return (
         <div className={styles.container}>
             <div className={styles.signupform}>
                 <div className={styles.title}>Sign Up</div>
-                <div className={styles.namebox}>
-                    <div className="flexbox">
-                        <div className={styles.formName}>Name</div>
-                        <input className={styles.formValue2} type="text" placeholder="Name" ></input>
-                    </div>
-                    <div className="flexbox">
-                        <div className={styles.formName}>Nickname</div>
-                        <input className={styles.formValue2} type="text" placeholder="Nickname" ></input>
-                    </div>
+                <buttoon className={styles.kakao} onClick={handleSoicalLogin}>Sign up with Kakao</buttoon>
+                <buttoon className={styles.google} onClick={handleSoicalLogin}>Sign up with Google</buttoon>
+                <div className={styles.boundary}>
+                    <hr />or<hr />
                 </div>
-                <div className={styles.formName}>Email</div>
-                <input className={styles.formValue} type="text" placeholder="Email" ></input>
-                <div className={styles.formName}>Password</div>
-                <input className={styles.formValue} type="password" placeholder="Password"></input>
-                <div className={styles.formName}>Phone Number</div>
-                <input className={styles.formValue} type="text" placeholder="Phone Number" ></input>
-                <div className={styles.formName}>Date of Birth</div>
-                <input className={styles.formValue} type="text" placeholder="Date of Birth" ></input>
-                <button className={styles.signupButton} >Sign up</button>
-                <div className={styles.social}>
-                    <button className={styles.google}>Log in with Google</button>
-                    <button className={styles.google}>Log in with Apple</button>
+                <Link to="/signup/email" className="link"><buttoon className={styles.email}>Sign up with Email</buttoon></Link>
+                <div className={styles.loginbox}>
+                    <Link to="/login" className={styles.login}>Already have an account?</Link>
                 </div>
-                <Link to="/login" className={styles.signup}>Already have an account?</Link>
             </div>
         </div>
     );

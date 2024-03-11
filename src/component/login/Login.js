@@ -14,8 +14,8 @@ function Login() {
                 <input className={styles.formValue} type="password" placeholder="Placeholder"></input>
                 <button className={styles.loginButton} >Log In</button>
                 <div className={styles.social}>
+                    <button className={styles.google}>Log in with Kakao</button>
                     <button className={styles.google}>Log in with Google</button>
-                    <button className={styles.google}>Log in with Apple</button>
                 </div>
                 <Link to="/signup" className={styles.signup}>No account yet? Sign Up</Link>
             </div>
