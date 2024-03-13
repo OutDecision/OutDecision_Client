@@ -6,7 +6,7 @@ function Pagination({pageCount, onPageChange, currentPage }) {
         <ReactPagination
             previousLabel={"<"}
             nextLabel={">"}
-            breakLabel={<a>...</a>}
+            breakLabel={<a href="#!">...</a>}
             pageCount={pageCount}
             onPageChange={onPageChange}
             forcePage={currentPage}

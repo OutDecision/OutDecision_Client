@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function PostView () {
     const [isOpen, setIsOpen] = useState(false);
     const [likeCount, setLikeCount] = useState(0); // likeCount 저장
+    const [selectedOPtion, setSelectedOption] = useState(null);
 
     const handleButtonClick = () => {
         setIsOpen(!isOpen);
@@ -22,6 +23,14 @@ function PostView () {
         2. 좋아요 누른거 서버에 알림
         */
        setLikeCount(likeCount + 1);
+    }
+
+    const handleSelectOption = (name) => {
+        if (selectedOPtion === name) {
+            setSelectedOption(null);
+            return;
+        }
+        setSelectedOption(name);
     }
 
     return (
@@ -59,9 +68,9 @@ function PostView () {
                             <div>2024-03-06 00:00 까지</div>
                         </div>
                         <div className={styles.optionbox}>
-                            <button className={styles.optionbutton}>초록색 니트 <img src="/assets/cloth.png" alt="옵션 1"/>  </button>                                         
-                            <button className={styles.optionbutton}>파란색 맨투맨 <img src="/assets/cloth.png" alt="옵션 2"/> </button>
-                            <button className={styles.optionbutton}>둘다 별로</button>
+                            <button className={styles.optionbutton} onClick={() => handleSelectOption('option1')}  style={{border: selectedOPtion === 'option1' ? "3px solid #ac2323" : ""}}>초록색 니트 <img src="/assets/cloth.png" alt="옵션 1"/>  </button>                                         
+                            <button className={styles.optionbutton} onClick={() => handleSelectOption('option2')}  style={{border: selectedOPtion === 'option2' ? "3px solid #ac2323" : ""}}>파란색 맨투맨 <img src="/assets/cloth.png" alt="옵션 2"/> </button>
+                            <button className={styles.optionbutton} onClick={() => handleSelectOption('option3')}  style={{border: selectedOPtion === 'option3' ? "3px solid #ac2323" : ""}}>둘다 별로</button>
                             <button className={styles.votebutton}>투표하기</button>
                         </div>
                     </div>

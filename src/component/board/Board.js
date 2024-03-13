@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './board.module.css';
 import Pagination from "../pagination/Pagination";
 import { Link, useNavigate } from "react-router-dom";
 
-function Board() {
+function Board({search, setSearch}) {
     const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(0);
 
@@ -11,6 +11,25 @@ function Board() {
         setCurrentPage(selected);
         window.scrollTo(0, 0); // 페이지 변경 시 스크롤을 맨 위로 이동
     };
+
+    const onKeywordChange = (e) => {
+        setSearch(e.target.value);
+    };
+
+    const onClick = (inputValue) => {
+        navigate(`/board/food/search/${search}`);
+    }
+
+    const handleEnter = (e) => {
+        if (e.key === 'Enter') {
+            onClick(search);
+        }
+    };
+
+    // 입력값 초기화
+    useEffect(()=> {
+        setSearch('');
+    }, [])
 
     return(
         <div className={styles.container}>
@@ -75,8 +94,8 @@ function Board() {
 
                 <div className={styles.searchbox}>
                     <div className={styles.searchbar}>
-                        <input className={styles.search} type="text" placeholder="게시물검색"></input>
-                        <img src="/assets/search.png"></img>
+                        <input className={styles.search} type="text" placeholder="게시물검색" value={search} onChange={onKeywordChange} onKeyDown={handleEnter}></input>
+                        <img src="/assets/search.png" alt="검색" onClick={onClick}></img>
                     </div>
                     <select className={styles.searchoption}>
                         <option>제목+내용</option>

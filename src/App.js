@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./component/header/Header";
@@ -18,9 +18,11 @@ import InfoEdit from "./component/infoedit/InfoEdit";
 import Mypost from "./component/mypost/Mypost";
 import Myliked from "./component/myliked/Myliked";
 import Mycomment from "./component/mycomment/Mycomment";
+import Search from "./component/search/Search";
 
 
 function App() {
+  const [search, setSearch] = useState('');
 
   return (
     <BrowserRouter>
@@ -31,8 +33,9 @@ function App() {
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/signup/email" element={<EmailSignup />}></Route>
         <Route path="/signup/social" element={<SocialSignup />}></Route>
-        <Route path="/board/:name" element={<Board />}></Route>
-        <Route path="/board/:name/hot" element={<HotPosting />}></Route>
+        <Route path="/board/:name" element={<Board search={search} setSearch={setSearch}/>}></Route>
+        <Route path="/board/:name/hot" element={<HotPosting search={search} setSearch={setSearch}/>}></Route>
+        <Route path="/board/:name/search/:keyword" element={<Search search={search} setSearch={setSearch}/>}></Route>
         <Route path="/board/postup/:name" element={<Postup />}></Route>
         <Route path="/board/view/:id" element={<PostView />}></Route>
         <Route path="/ranking" element={<Ranking />}></Route>
@@ -40,7 +43,7 @@ function App() {
         <Route path="/mypage/edit" element={<InfoEdit />}></Route>
         <Route path="/mypage/posting" element={<Mypost />}></Route>
         <Route path="/mypage/comment" element={<Mycomment />}></Route>
-        <Route path="/mypage/liked" element={<Myliked />}></Route>
+        <Route path="/mypage/liked" element={<Myliked />}></Route>      
       </Routes>
       <Footer />
     </BrowserRouter>

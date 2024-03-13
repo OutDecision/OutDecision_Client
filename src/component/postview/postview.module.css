@@ -173,13 +173,14 @@
 }
 
 .like {
-    width: 120px;
+    width: 130px;
     height: 40px;
     background-color: white;
     border-color: #ac2323;
     font-size: 18px;
     margin-right: 10px;
     cursor: pointer;
+    white-space: nowrap;
 }
 .like span {
     color: #ac2323;
