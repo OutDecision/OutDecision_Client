@@ -9,6 +9,7 @@ import Signup from "./component/signup/Signup";
 import EmailSignup from "./component/signup/EmailSignup";
 import SocialSignup from "./component/signup/SocialSignup";
 import Board from "./component/board/Board";
+import HotPosting from "./component/board/HotPosting";
 import Postup from "./component/postup/Postup";
 import PostView from "./component/postview/PostView";
 import Ranking from "./component/ranking/Ranking";
@@ -17,6 +18,7 @@ import InfoEdit from "./component/infoedit/InfoEdit";
 import Mypost from "./component/mypost/Mypost";
 import Myliked from "./component/myliked/Myliked";
 import Mycomment from "./component/mycomment/Mycomment";
+
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
         <Route path="/signup/email" element={<EmailSignup />}></Route>
         <Route path="/signup/social" element={<SocialSignup />}></Route>
         <Route path="/board/:name" element={<Board />}></Route>
+        <Route path="/board/:name/hot" element={<HotPosting />}></Route>
         <Route path="/board/postup/:name" element={<Postup />}></Route>
         <Route path="/board/view/:id" element={<PostView />}></Route>
         <Route path="/ranking" element={<Ranking />}></Route>

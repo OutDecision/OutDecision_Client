@@ -114,6 +114,7 @@
     font-size: 20px;
     font-weight: 600;
     color: gray;
+    cursor: pointer;
 }
 
 .active {
@@ -123,6 +124,7 @@
     padding: 6px;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .postlist {
@@ -138,6 +140,7 @@
     top: -30px;
     right: 5px;
     color: gray;
+    cursor: pointer;
 }
 
 .post {

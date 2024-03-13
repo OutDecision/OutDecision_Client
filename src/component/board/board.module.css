@@ -22,7 +22,7 @@
     min-width: 900px;
 }
 
-.all {
+.select {
     margin-right: 10px;
     width: 95px;
     height: 40px;
@@ -31,15 +31,18 @@
     color: white;
     background-color: #ac2323;
     border: none;
+    cursor: pointer;
 }
 
-.hot {
+.unselected {
+    margin-right: 10px;
     width: 95px;
     height: 40px;
     font-size: 18px;
     font-weight: 600;
     background-color: white;
     border: 2px solid gray;
+    cursor: pointer;
 }
 
 .voteoption {
@@ -56,6 +59,7 @@
     border: 2px solid #ac2323;
     font-weight: 600;
     width: 75px;
+    cursor: pointer;
 }
 
 .posthead {

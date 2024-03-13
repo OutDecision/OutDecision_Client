@@ -3,7 +3,7 @@ import styles from './board.module.css';
 import Pagination from "../pagination/Pagination";
 import { Link, useNavigate } from "react-router-dom";
 
-function Board() {
+function HotPosting() {
     const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(0);
 
@@ -18,8 +18,8 @@ function Board() {
                 <div className={styles.boardtitle}><span className={styles.decoration}>|</span>음식</div>
                 <div className={styles.boardnav}>
                     <div className="flexbox2">
-                        <button className={styles.select} onClick={() => navigate('/board/food')}>전체글</button>
-                        <button className={styles.unselected} onClick={() => navigate('/board/food/hot')}>HOT</button>
+                        <button className={styles.unselected} onClick={() => navigate('/board/food')}>전체글</button>
+                        <button className={styles.select} onClick={() => navigate('/board/food/hot')}>HOT</button>
                     </div>
                     <div className="flexbox2">
                         <select className={styles.voteoption}>
@@ -58,7 +58,7 @@ function Board() {
                         <tr>
                             <td>1</td>
                             <td>투표중</td>
-                            <td><Link  className="link" to="/board/view/1">안녕하세요</Link></td>
+                            <td><Link  className="link" to="/board/view/1">음식 핫 게시물</Link></td>
                             <td>패알못</td>
                             <td>18:09</td>
                             <td>101</td>
@@ -90,4 +90,4 @@ function Board() {
     );
 }
 
-export default Board;
+export default HotPosting;

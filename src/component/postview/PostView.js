@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function PostView () {
     const [isOpen, setIsOpen] = useState(false);
+    const [likeCount, setLikeCount] = useState(0); // likeCount 저장
 
     const handleButtonClick = () => {
         setIsOpen(!isOpen);
@@ -13,6 +14,14 @@ function PostView () {
         setTimeout(() => {
             setIsOpen(false);
         }, 200);
+    }
+
+    const handleLikeCount = () => {
+        /*
+        1. 좋아요 이미 눌렀는지 확인
+        2. 좋아요 누른거 서버에 알림
+        */
+       setLikeCount(likeCount + 1);
     }
 
     return (
@@ -29,7 +38,7 @@ function PostView () {
                         <div className={styles.detail}>
                             <span>끌올 0</span>
                             <span>조회수 0</span>
-                            <span>좋아요 0</span>
+                            <span>좋아요 {likeCount}</span>
                             <span>댓글 0</span>
                         </div>
                     </div>
@@ -58,7 +67,7 @@ function PostView () {
                     </div>
                     <div className={styles.content}>옷 살건데 뭐사는게 좋을까ㅠㅠ</div>
                     <div className={styles.likebox}>
-                        <button className={styles.like}>❤️ 좋아요 <span>0</span></button>
+                        <button className={styles.like} onClick={handleLikeCount}>❤️ 좋아요 <span>{likeCount}</span></button>
                         <button className={styles.pullup}>🔥 끌어올리기 <span>0</span></button>
                     </div>
                 </div>
