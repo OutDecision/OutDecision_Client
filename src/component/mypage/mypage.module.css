@@ -78,12 +78,18 @@
     margin-right: 10px;
 }
 
-.imagebox span:nth-child(1) {
+.namebox div {
+    color: #468FD3;
+}
+
+.namebox span {
     font-size: 25px;
 }
 
-.imagebox span:nth-child(2) {
-    color: #468FD3;
+.namebox img {
+    width: 27px;
+    margin-left: 10px;
+    vertical-align: bottom;
 }
 
 .userinfo {
@@ -102,17 +108,21 @@
     padding: 15px;
 }
 
-.menu span {
+.inactive {
     margin-right: 15px;
     padding: 6px;
-    color: gray;
     font-size: 20px;
     font-weight: 600;
+    color: gray;
 }
 
-.menu span:nth-child(1) {
-    border-bottom: 4px solid #ac2323;
+.active {
     color: #ac2323;
+    border-bottom: 4px solid #ac2323;
+    margin-right: 15px;
+    padding: 6px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .postlist {
@@ -146,3 +156,35 @@
     font-weight: 600;
 }
 
+.commentbox {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 30px 0;
+    height: 30px;
+    border-top: 1px solid lightgray;
+}
+
+.commentitem {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.commentitem div {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.commentitem2 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.commentitem2 span {
+    color: #ac2323;
+    font-weight: 600;
+}
+.commentitem2 div:nth-child(1) {
+    margin-left: 15px;
+}

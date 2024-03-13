@@ -93,6 +93,10 @@
     letter-spacing: 1.5px;
 }
 
+.edittable tr td button {
+    padding: 10px;
+}
+
 .buttonbox {
     margin-top: 20px;
     display: flex;
@@ -119,5 +123,79 @@
     border: none;
     border-radius: 8px;
     background-color: #ac2323;
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    width: 600px;
+    height: 300px;
+  
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    border: 1px solid gray;
+    padding: 0;
+  }
+
+.modalheader {
+    height: 40px;
+    background-color: #ac2323;
+    color: white;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalbody {
+    padding: 20px;
+}
+
+.passwordtable {
+    border-collapse: separate;
+    border-spacing: 20px 10px;
+    font-size: 20px;
+}
+
+.passwordtable tr td input {
+    width: 300px;
+    height: 30px;
+}
+
+.buttonbox2 {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonbox2 button:nth-child(1) {
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ac2323;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonbox2 button:nth-child(2) {
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #C2C2C2;
     color: white;
 }

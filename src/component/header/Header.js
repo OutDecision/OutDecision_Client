@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <>
-            <div className={styles.header}>
+            <div className={styles.header} id="header">
                 <Link to="/"><img className={styles.logo} src="/assets/logo.png" alt="logo"/></Link>
                 <div className={styles.searchbar}>
                     <input className={styles.search} type="text" placeholder="통합검색"></input>
