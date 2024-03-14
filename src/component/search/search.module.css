@@ -31,8 +31,10 @@
     border: 2px solid black;
     font-weight: 600;
     width: 75px;
+    height: 40px;
     padding-left: 5px;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .write {

@@ -48,6 +48,7 @@
     display: flex;
     padding-bottom: 20px;
     border-bottom: 2px solid #6d6d6d;
+    margin-bottom: 10px;
 }
 
 .voteoption {
@@ -58,7 +59,7 @@
 }
 
 .options {
-    padding: 25px 0 10px 0;
+    padding: 10px 0 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,8 +92,11 @@
     white-space: nowrap;
 }
 
-.filename {
-    margin-left: 5px;
+.preview {
+    width: 60px;
+    padding: 10px;
+    border: 1px solid lightslategray;
+    border-radius: 8px;
 }
 
 .add {

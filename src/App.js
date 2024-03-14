@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./component/header/Header";
@@ -19,14 +19,16 @@ import Mypost from "./component/mypost/Mypost";
 import Myliked from "./component/myliked/Myliked";
 import Mycomment from "./component/mycomment/Mycomment";
 import Search from "./component/search/Search";
+import FullSearch from "./component/search/FullSearch";
 
 
 function App() {
   const [search, setSearch] = useState('');
+  const [fullSearch, setFullSearch] = useState('');
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header fullSearch={fullSearch} setFullSearch={setFullSearch}/>
       <Routes>
         <Route path="/" element={<Main />}></Route>
         <Route path="/login" element={<Login />}></Route>
@@ -43,7 +45,8 @@ function App() {
         <Route path="/mypage/edit" element={<InfoEdit />}></Route>
         <Route path="/mypage/posting" element={<Mypost />}></Route>
         <Route path="/mypage/comment" element={<Mycomment />}></Route>
-        <Route path="/mypage/liked" element={<Myliked />}></Route>      
+        <Route path="/mypage/liked" element={<Myliked />}></Route>
+        <Route path="/search/:keyword" element={<FullSearch/>}></Route>      
       </Routes>
       <Footer />
     </BrowserRouter>
