@@ -1,11 +1,40 @@
 import React, { useState } from "react";
 import styles from './mypage.module.css';
 import { Link, useNavigate } from "react-router-dom";
+import Modal from 'react-modal';
 
 function Mypage () {
     const navigate = useNavigate();
 
     const [activeMenu, setActiveMenu] = useState('post');
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
+    const [profileImage, setProfileImage] = useState('/assets/user.png');
+
+    const openModal = () => {
+        setModalIsOpen(true);
+        document.body.style.overflow = "hidden";
+        document.getElementById('header').style.zIndex = 0; // 헤더가 뒤로 안감
+        window.scrollTo(0, 0); 
+    }
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+        document.body.style.overflow = "unset";
+        document.getElementById('header').style.zIndex = 100;
+    }
+
+    const handleImageUpload = (e) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+
+        return new Promise((resolve) => {
+            reader.onload = () => {
+                setProfileImage(reader.result);
+                resolve();
+            };
+        });
+    };
 
     const handleMenu = (menu) => {
         setActiveMenu(menu);
@@ -28,7 +57,7 @@ function Mypage () {
                         <img src="/assets/user.png" alt="프로필" />
                         <div className={styles.namebox}>
                             <div>패셔니스타</div>
-                            <span>패알못 님</span><img src="/assets/setting.png" alt="설정" />                      
+                            <span>패알못 님</span><img src="/assets/setting.png" alt="설정" onClick={openModal}/>                      
                         </div>
                     </div>
                     <div className={styles.userinfo}>가입일 <span>2024년 02월 19일</span></div>
@@ -109,6 +138,52 @@ function Mypage () {
                     )}          
                 </div>
             </div>
+            <Modal className={styles.modal} isOpen={modalIsOpen}>
+                <div className={styles.modalheader}>
+                    <span>프로필 설정</span>
+                </div>
+                <div className={styles.modalbody}>
+                    <div className={styles.profiletable}>
+                        <img src={profileImage} alt="프로필" />
+                        <div className={styles.editprofile}>
+                            <div class={styles.filebox}>
+                                <label for="file">프로필 편집</label>
+                                <input id="file" type="file" onChange={(e) => handleImageUpload(e)} accept=".png,.jpg" />
+                            </div>
+                            <button onClick={() => setProfileImage('/assets/user.png')}>기본 프로필 설정</button>
+                        </div>
+                    </div>
+                    <table className={styles.profiletable2}>
+                            <colgroup>
+                                <col width="30%"/>
+                                <col width="70%"/>
+                            </colgroup>
+                            <tr>
+                                <td>닉네임</td>
+                                <td><input className={styles.nickname} value="패알못"></input></td>
+                            </tr>
+                            <tr>
+                                <td>칭호</td>
+                                <td><div className={styles.titlebox}>
+                                        칭호 사용 <input className={styles.checkbox} type="checkbox" checked={isChecked} onChange={()=>setIsChecked(!isChecked)} />
+                                        {isChecked && (
+                                        <select className={styles.titleoption}>
+                                            <option>새싹</option>
+                                            <option>패셔니스타</option>          
+                                        </select>
+                                        )}
+                                    </div>
+                                </td>
+                            </tr>
+                    </table>
+                
+                    <div className={styles.buttonbox2}>
+                        <button onClick={closeModal}>변경</button>
+                        <button onClick={closeModal}>취소</button>
+                    </div>
+                </div>
+            </Modal>
+
         </div>
     );
 }
