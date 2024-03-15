@@ -29,11 +29,11 @@ function Header({fullSearch, setFullSearch}) {
                     <img src="/assets/search.png" alt="돋보기" onClick={onClick}/>
                 </div>
                 <div className={styles.loginbar}>
-                    <Link to="/login" className="link">
+                    <Link to="/login" className={styles.loginbox}>
                         <img src="/assets/login.png" alt="로그인"/>
                         <span className={styles.login}>로그인</span>
                     </Link>
-                    <Link to="/signup" className="link">
+                    <Link to="/signup" className={styles.loginbox}>
                         <img src="/assets/signup.png" alt="회원가입"/>
                         <span className={styles.signup}>회원가입</span>
                     </Link>

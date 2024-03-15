@@ -1,5 +1,5 @@
 .container {
-    min-height: calc(100vh - 50px);
+    min-height: calc(100vh - 160px);
     padding: 20px 17% 50px 17%;
     display: flex;
 }

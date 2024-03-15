@@ -45,7 +45,7 @@ function FullSearch() {
 
                     <thead className={styles.posthead}>
                         <tr>
-                            <th>번호</th>
+                            <th>구분</th>
                             <th>투표</th>
                             <th>제목</th>
                             <th>글쓴이</th>
@@ -57,7 +57,7 @@ function FullSearch() {
 
                     <tbody>
                         <tr>
-                            <td>1</td>
+                            <td>음식</td>
                             <td>투표중</td>
                             <td><Link  className="link" to="/board/view/1">안녕하세요</Link></td>
                             <td>패알못</td>

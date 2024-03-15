@@ -55,6 +55,13 @@
     margin-right: 5px;
 }
 
+.loginbox {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
 .login {
     font-size: 1.3em;
     font-weight: 550;

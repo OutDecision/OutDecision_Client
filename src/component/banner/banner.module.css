@@ -1,10 +1,15 @@
 .container {
-    padding: 20px 13% 40px 13%;
+    padding: 20px 17% 40px 17%;
     margin-bottom: 7px;
 }
 
+/*
+반응형
+width: 100%;
+height: auto;
+*/
 .banner {
-    width: 1030px;
+    width: 1018px;
     height: 460px;
     text-align: center;
     border-radius: 8px;

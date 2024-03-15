@@ -4,19 +4,6 @@ import styles from './floatingbanner.module.css';
 
 function FloatingBanner () {
     
-/*
-  return (
-    <div className={styles.container}>
-      <div className={styles.sideBanner}>
-        <div className={styles.rankbar}>Rank</div>
-        <div className={styles.list}>
-            <div className={styles.detail}><span className={styles.ranking}>1</span><span>PLAYER1</span><span className={styles.point}>10000</span></div>
-            <div className={styles.detail}><span className={styles.ranking}>10</span><span>PLAYER1</span><span className={styles.point}>900</span></div>
-        </div>
-      </div>
-    </div>
-  );
-*/
 return (
     <div className={styles.container}>
       <div className={styles.sideBanner}>
