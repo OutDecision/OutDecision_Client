@@ -94,22 +94,29 @@
 
 .leftMenu span {
     font-size: 17px;
-     font-weight: 600;
-     margin-right: 25px;
+    font-weight: 600;
+
 }
 
-.rightMenu span {
+.rightMenu {
     font-size: 17px;
     font-weight: 600;
-    margin-left: 25px;
+}
+
+.hot {
+    text-decoration: none;
+    color: white;
+    margin-right: 13px;
 }
 
 .category {
     text-decoration: none;
     color: white;
+    margin: 0 13px;
 }
 
 .rankinglink {
     text-decoration: none;
     color: white;
+    margin-left: 13px;
 }

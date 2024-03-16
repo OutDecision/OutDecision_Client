@@ -29,6 +29,7 @@ function Board({search, setSearch}) {
     // 입력값 초기화
     useEffect(()=> {
         setSearch('');
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return(
@@ -95,7 +96,7 @@ function Board({search, setSearch}) {
                 <div className={styles.searchbox}>
                     <div className={styles.searchbar}>
                         <input className={styles.search} type="text" placeholder="게시물검색" value={search} onChange={onKeywordChange} onKeyDown={handleEnter}></input>
-                        <img src="/assets/search.png" alt="검색" onClick={onClick}></img>
+                        <img src="/assets/search_black.png" alt="검색" onClick={onClick}></img>
                     </div>
                     <select className={styles.searchoption}>
                         <option>제목+내용</option>

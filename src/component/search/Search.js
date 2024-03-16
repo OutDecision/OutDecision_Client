@@ -32,17 +32,14 @@ function Search({search, setSearch}) {
             <div className="flexbox">
                 <div className={styles.boardtitle}><span className={styles.decoration}>|</span>음식</div>
                 <div className={styles.boardnav}>
-                    <div className={styles.keyword}>"{keyword}" 검색 결과 (30)</div>
+                    <div className={styles.keyword}>"{keyword}" 검색 결과 <span>(30)</span></div>
                     <div className="flexbox2">
-                        <div className={styles.searchbar}>
-                            <input className={styles.search} type="text" placeholder="게시물검색" value={search} onChange={onKeywordChange} onKeyDown={handleEnter}></input>
-                            <img src="/assets/search.png" alt="검색" onClick={onClick}></img>
-                        </div>
                         <select className={styles.voteoption}>
                             <option>전체</option>
                             <option>진행중</option>
                             <option>마감</option>
                         </select>
+                        <button className={styles.write} onClick={()=> navigate(`/board/postup/food`)}>글쓰기</button>
                     </div>
                 </div>
 
@@ -87,6 +84,19 @@ function Search({search, setSearch}) {
                     onPageChange={handlePageChange}
                     currentPage={currentPage}
                 />
+
+                <div className={styles.searchbox}>
+                    <div className={styles.searchbar}>
+                        <input className={styles.search} type="text" placeholder="게시물검색" value={search} onChange={onKeywordChange} onKeyDown={handleEnter}></input>
+                        <img src="/assets/search_black.png" alt="검색" onClick={onClick}></img>
+                    </div>
+                    <select className={styles.searchoption}>
+                        <option>제목+내용</option>
+                        <option>제목</option>
+                        <option>내용</option>
+                        <option>닉네임</option>
+                    </select>
+                </div>
             </div>
         </div>
     );

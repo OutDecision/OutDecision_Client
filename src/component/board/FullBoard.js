@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import styles from './search.module.css';
+import React, { useEffect, useState } from "react";
+import styles from './board.module.css';
 import Pagination from "../pagination/Pagination";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function FullSearch({search, setSearch}) {
+function FullBoard({search, setSearch}) {
     const navigate = useNavigate();
-    const {keyword} = useParams();
     const [currentPage, setCurrentPage] = useState(0);
 
     const handlePageChange = ({ selected }) => {
@@ -27,12 +26,17 @@ function FullSearch({search, setSearch}) {
         }
     };
 
+    useEffect(()=> {
+        setSearch('');
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
     return(
         <div className={styles.container}>
             <div className="flexbox">
                 <div className={styles.boardtitle}><span className={styles.decoration}>|</span>전체</div>
                 <div className={styles.boardnav}>
-                    <div className={styles.keyword}>"{keyword}" 검색 결과 <span>(30)</span></div>
+                    <button className={styles.select} onClick={() => navigate('/board/all')}>전체글</button>
                     <div className="flexbox2">
                         <select className={styles.voteoption}>
                             <option>전체</option>
@@ -88,7 +92,7 @@ function FullSearch({search, setSearch}) {
                     onPageChange={handlePageChange}
                     currentPage={currentPage}
                 />
-
+                
                 <div className={styles.searchbox}>
                     <div className={styles.searchbar}>
                         <input className={styles.search} type="text" placeholder="게시물검색" value={search} onChange={onKeywordChange} onKeyDown={handleEnter}></input>
@@ -106,4 +110,4 @@ function FullSearch({search, setSearch}) {
     );
 }
 
-export default FullSearch;
+export default FullBoard;

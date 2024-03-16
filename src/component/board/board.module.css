@@ -45,13 +45,15 @@
     cursor: pointer;
 }
 
+
 .voteoption {
     border: 2px solid black;
     font-weight: 600;
     width: 75px;
-    margin-right: 20px;
+    height: 40px;
     padding-left: 5px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .write {
@@ -59,7 +61,9 @@
     border: 2px solid #ac2323;
     font-weight: 600;
     width: 75px;
+    height: 40px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .posthead {
@@ -110,9 +114,9 @@
 
 .searchbar img {
     position: absolute;
-    width: 15px;
+    width: 20px;
     right: 8px;
-    bottom: 10px;
+    bottom: 8px;
 }
 
 .searchoption {

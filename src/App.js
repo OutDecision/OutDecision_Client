@@ -20,23 +20,25 @@ import Myliked from "./component/myliked/Myliked";
 import Mycomment from "./component/mycomment/Mycomment";
 import Search from "./component/search/Search";
 import FullSearch from "./component/search/FullSearch";
+import FullBoard from "./component/board/FullBoard";
 
 
 function App() {
   const [search, setSearch] = useState('');
-  const [fullSearch, setFullSearch] = useState('');
 
   return (
     <BrowserRouter>
-      <Header fullSearch={fullSearch} setFullSearch={setFullSearch}/>
+      <Header/>
       <Routes>
         <Route path="/" element={<Main />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/signup/email" element={<EmailSignup />}></Route>
         <Route path="/signup/social" element={<SocialSignup />}></Route>
+        <Route path="/board/all" element={<FullBoard search={search} setSearch={setSearch}/>}></Route>
         <Route path="/board/:name" element={<Board search={search} setSearch={setSearch}/>}></Route>
         <Route path="/board/:name/hot" element={<HotPosting search={search} setSearch={setSearch}/>}></Route>
+        <Route path="/board/all/search/:keyword" element={<FullSearch search={search} setSearch={setSearch}/>}></Route>  
         <Route path="/board/:name/search/:keyword" element={<Search search={search} setSearch={setSearch}/>}></Route>
         <Route path="/board/postup/:name" element={<Postup />}></Route>
         <Route path="/board/view/:id" element={<PostView />}></Route>
@@ -45,8 +47,7 @@ function App() {
         <Route path="/mypage/edit" element={<InfoEdit />}></Route>
         <Route path="/mypage/posting" element={<Mypost />}></Route>
         <Route path="/mypage/comment" element={<Mycomment />}></Route>
-        <Route path="/mypage/liked" element={<Myliked />}></Route>
-        <Route path="/search/:keyword" element={<FullSearch/>}></Route>      
+        <Route path="/mypage/liked" element={<Myliked />}></Route>           
       </Routes>
       <Footer />
     </BrowserRouter>
