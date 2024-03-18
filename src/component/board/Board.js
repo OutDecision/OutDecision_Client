@@ -1,11 +1,22 @@
 import React, { useEffect, useState } from "react";
 import styles from './board.module.css';
 import Pagination from "../pagination/Pagination";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 function Board({search, setSearch}) {
     const navigate = useNavigate();
+    let {name} = useParams();
     const [currentPage, setCurrentPage] = useState(0);
+
+    const boardNameMap = {
+        food: '음식',
+        love: '연애',
+        fashion: '패션',
+        hobby: '취미',
+        work: '취업',
+        travel: '여행',
+        etc: '기타',
+    };
 
     const handlePageChange = ({ selected }) => {
         setCurrentPage(selected);
@@ -17,7 +28,7 @@ function Board({search, setSearch}) {
     };
 
     const onClick = (inputValue) => {
-        navigate(`/board/food/search/${search}`);
+        navigate(`/board/${name}/search/${search}`);
     }
 
     const handleEnter = (e) => {
@@ -35,11 +46,11 @@ function Board({search, setSearch}) {
     return(
         <div className={styles.container}>
             <div className="flexbox">
-                <div className={styles.boardtitle}><span className={styles.decoration}>|</span>음식</div>
+                <div className={styles.boardtitle}><span className={styles.decoration}>|</span>{boardNameMap[name]}</div>
                 <div className={styles.boardnav}>
                     <div className="flexbox2">
-                        <button className={styles.select} onClick={() => navigate('/board/food')}>전체글</button>
-                        <button className={styles.unselected} onClick={() => navigate('/board/food/hot')}>HOT</button>
+                        <button className={styles.select} onClick={() => navigate(`/board/${name}`)}>전체글</button>
+                        <button className={styles.unselected} onClick={() => navigate(`/board/${name}/hot`)}>HOT</button>
                     </div>
                     <div className="flexbox2">
                         <select className={styles.voteoption}>
@@ -47,7 +58,7 @@ function Board({search, setSearch}) {
                             <option>진행중</option>
                             <option>마감</option>
                         </select>
-                        <button className={styles.write} onClick={()=> navigate(`/board/postup/food`)}>글쓰기</button>
+                        <button className={styles.write} onClick={()=> navigate(`/board/postup/${name}`)}>글쓰기</button>
                     </div>
                 </div>
 

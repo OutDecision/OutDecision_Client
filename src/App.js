@@ -21,6 +21,7 @@ import Mycomment from "./component/mycomment/Mycomment";
 import Search from "./component/search/Search";
 import FullSearch from "./component/search/FullSearch";
 import FullBoard from "./component/board/FullBoard";
+import HotBoard from "./component/board/HotBoard";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/signup/email" element={<EmailSignup />}></Route>
         <Route path="/signup/social" element={<SocialSignup />}></Route>
+        <Route path="/board/hot" element={<HotBoard />}></Route>
         <Route path="/board/all" element={<FullBoard search={search} setSearch={setSearch}/>}></Route>
         <Route path="/board/:name" element={<Board search={search} setSearch={setSearch}/>}></Route>
         <Route path="/board/:name/hot" element={<HotPosting search={search} setSearch={setSearch}/>}></Route>

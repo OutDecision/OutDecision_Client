@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./postup.module.css"
 import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Postup () {
     const navigate = useNavigate();
+    let {name} = useParams();
 
     const now = new Date();
     const hours = now.getHours();
@@ -18,6 +19,16 @@ function Postup () {
     const [selectedHours, setSelectedHours] = useState(`${hours}시`);
     const [selectedMinutes, setSelectedMinutes] = useState(`${minutes}분`);
     
+    const boardNameMap = {
+        food: '음식',
+        love: '연애',
+        fashion: '패션',
+        hobby: '취미',
+        work: '취업',
+        travel: '여행',
+        etc: '기타',
+    };
+
     const handleHoursChange = (newValue) => {
         const h = Number(newValue.substring(0,2));
         const m = Number(selectedMinutes.substring(0,2));
@@ -97,7 +108,7 @@ function Postup () {
 
     return (
         <div className={styles.container}>
-            <div className={styles.boardtitle}><span className={styles.decoration}>|</span>음식</div>
+            <div className={styles.boardtitle}><span className={styles.decoration}>|</span>{boardNameMap[name]}</div>
             <div className={styles.writeform}>
                 <div>게시글 작성</div>
                 <input className={styles.title} placeholder="제목을 입력하세요"/>
