@@ -1,16 +1,32 @@
 import React from "react";
 import styles from './header.module.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Header() {
+function Header({fullSearch, setFullSearch}) {
+    const navigate = useNavigate();
+
+    const onKeywordChange = (e) => {
+        setFullSearch(e.target.value);
+    };
+
+    const onClick = (inputValue) => {
+        navigate(`/board/all/search/${inputValue}`);
+        setFullSearch('');
+    }
+
+    const handleEnter = (e) => {
+        if (e.key === 'Enter') {
+            onClick(fullSearch);
+        }
+    };
 
     return (
         <>
             <div className={styles.header} id="header">
                 <Link to="/"><img className={styles.logo} src="/assets/logo.png" alt="logo"/></Link>
                 <div className={styles.searchbar}>
-                    <input className={styles.search} type="text" placeholder="통합검색"></input>
-                    <img src="/assets/search.png" alt="돋보기"/>
+                    <input className={styles.search} type="text" placeholder="통합검색" value={fullSearch} onChange={onKeywordChange} onKeyDown={handleEnter}></input>
+                    <img src="/assets/search.png" alt="돋보기" onClick={onClick}/>
                 </div>
                 <div className={styles.loginbar}>
                     <Link to="/login" className={styles.loginbox}>

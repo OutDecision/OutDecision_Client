@@ -12,7 +12,7 @@
     font-size: 30px;
     font-weight: 600;
     color: #ac2323;
-    margin: 25px 0 0 0;
+    margin: 25px 0 10px 0;
 }
 
 .boardnav {
@@ -34,14 +34,98 @@
     margin-left: 5px;
 }
 
-.voteoption {
-    border: 2px solid black;
-    font-weight: 600;
+.filterbox {
+    position: relative;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 75px;
     height: 40px;
-    padding-left: 5px;
-    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    font-weight: 600;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+.filter img {
+    width: 25px;
+}
+
+.filteroption {
+    position: absolute;
+    z-index: 1000;
+    background-color: #f4f4f4;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+    width: 270px;
+    right: 0;
+    top: 47px;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filteroption2 {
+    position: absolute;
+    z-index: 1000;
+    background-color: #f4f4f4;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+    width: 335px;
+    right: 0;
+    top: 47px;
+    padding: 12px 10px 12px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.apply {
+    background-color: #ac2323;
+    border-radius: 8px;
+    border: none;
+    padding:  5px 15px;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+}
+
+.gender {
+    margin-bottom: 15px;
+}
+
+.gender div:nth-child(1) {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.genderoption {
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    accent-color: #ac2323;
+}
+
+.voteoption {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    accent-color: #ac2323;
+}
+
+.categoryoption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    accent-color: #ac2323;
+}
+
+.categoryoption label {
+    width: 16%;
+    margin-right: 25px;
 }
 
 .write {
@@ -57,6 +141,16 @@
 .posthead {
     background-color: #f7f7f7;
     min-width: 1000px;
+}
+
+.posthead th:nth-child(6), th:nth-child(7) {
+    position: relative;
+}
+.posthead span {
+    position: absolute;
+    font-size: 23px;
+    font-weight: 800;
+    bottom: 7px;
 }
 
 .posttable {

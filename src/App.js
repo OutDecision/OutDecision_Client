@@ -26,10 +26,11 @@ import HotBoard from "./component/board/HotBoard";
 
 function App() {
   const [search, setSearch] = useState('');
+  const [fullSearch, setFullSearch] = useState('');
 
   return (
     <BrowserRouter>
-      <Header/>
+      <Header fullSearch={fullSearch} setFullSearch={setFullSearch}/>
       <Routes>
         <Route path="/" element={<Main />}></Route>
         <Route path="/login" element={<Login />}></Route>
@@ -37,10 +38,10 @@ function App() {
         <Route path="/signup/email" element={<EmailSignup />}></Route>
         <Route path="/signup/social" element={<SocialSignup />}></Route>
         <Route path="/board/hot" element={<HotBoard />}></Route>
-        <Route path="/board/all" element={<FullBoard search={search} setSearch={setSearch}/>}></Route>
+        <Route path="/board/all" element={<FullBoard />}></Route>
         <Route path="/board/:name" element={<Board search={search} setSearch={setSearch}/>}></Route>
         <Route path="/board/:name/hot" element={<HotPosting search={search} setSearch={setSearch}/>}></Route>
-        <Route path="/board/all/search/:keyword" element={<FullSearch search={search} setSearch={setSearch}/>}></Route>  
+        <Route path="/board/all/search/:keyword" element={<FullSearch/>}></Route>  
         <Route path="/board/:name/search/:keyword" element={<Search search={search} setSearch={setSearch}/>}></Route>
         <Route path="/board/postup/:name" element={<Postup />}></Route>
         <Route path="/board/view/:id" element={<PostView />}></Route>

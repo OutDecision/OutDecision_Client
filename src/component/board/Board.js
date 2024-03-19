@@ -6,7 +6,12 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 function Board({search, setSearch}) {
     const navigate = useNavigate();
     let {name} = useParams();
+
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [currentPage, setCurrentPage] = useState(0);
+
+    const [gender, setGender] = useState("전체");
+    const [voteState, setVoteState] = useState("전체");
 
     const boardNameMap = {
         food: '음식',
@@ -17,6 +22,25 @@ function Board({search, setSearch}) {
         travel: '여행',
         etc: '기타',
     };
+
+    const handleFilterClick = () => {
+        setIsFilterOpen(!isFilterOpen);
+    }
+
+    const handleGenderClick = (e) => {
+        setGender(e.target.value);
+    }
+
+    const handleVoteStateClick = (e) => {
+        setVoteState(e.target.value);
+    }
+
+    const handleApplyFilter = () => {
+        /*
+        필터 적용 코드
+        */
+       setIsFilterOpen(false);
+    }
 
     const handlePageChange = ({ selected }) => {
         setCurrentPage(selected);
@@ -53,11 +77,48 @@ function Board({search, setSearch}) {
                         <button className={styles.unselected} onClick={() => navigate(`/board/${name}/hot`)}>HOT</button>
                     </div>
                     <div className="flexbox2">
-                        <select className={styles.voteoption}>
-                            <option>전체</option>
-                            <option>진행중</option>
-                            <option>마감</option>
-                        </select>
+                        <div className={styles.filterbox}>
+                            <button className={styles.filter} onClick={handleFilterClick}>필터 <img src="/assets/filter.png" alt="필터" /></button>
+                            {isFilterOpen && (
+                                <div className={styles.filteroption}>
+                                    <div className={styles.gender}>
+                                        <div>성별</div>
+                                        <div className={styles.genderoption}>
+                                            <label>
+                                            <input type="radio" value="전체" checked={gender === "전체"} onChange={handleGenderClick}/>
+                                            전체
+                                            </label>
+                                            <label>
+                                            <input type="radio" value="남" checked={gender === "남"} onChange={handleGenderClick}/>
+                                            남
+                                            </label>
+                                            <label>
+                                            <input type="radio" value="여" checked={gender === "여"} onChange={handleGenderClick}/>
+                                            여
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div className={styles.gender}>
+                                        <div>투표상태</div>
+                                        <div className={styles.voteoption}>
+                                            <label>
+                                            <input type="radio" value="전체" checked={voteState === "전체"} onChange={handleVoteStateClick}/>
+                                            전체
+                                            </label>
+                                            <label>
+                                            <input type="radio" value="투표중" checked={voteState === "투표중"} onChange={handleVoteStateClick}/>
+                                            투표중
+                                            </label>
+                                            <label>
+                                            <input type="radio" value="투표마감" checked={voteState === "투표마감"} onChange={handleVoteStateClick}/>
+                                            투표마감
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button className={styles.apply} onClick={handleApplyFilter}>적용</button>
+                                </div>
+                            )}
+                        </div>
                         <button className={styles.write} onClick={()=> navigate(`/board/postup/${name}`)}>글쓰기</button>
                     </div>
                 </div>
@@ -66,11 +127,11 @@ function Board({search, setSearch}) {
                     <colgroup>
                         <col width="6%"/>
                         <col width="8%"/>
-                        <col width="50%"/>
-                        <col width="13%"/>
+                        <col width="49%"/>
+                        <col width="11%"/>
                         <col width="8%"/>
-                        <col width="8%"/>
-                        <col width="8%"/>
+                        <col width="9%"/>
+                        <col width="9%"/>
                     </colgroup>
 
                     <thead className={styles.posthead}>
@@ -80,8 +141,8 @@ function Board({search, setSearch}) {
                             <th>제목</th>
                             <th>글쓴이</th>
                             <th>작성일</th>
-                            <th>좋아요</th>
-                            <th>조회수</th>
+                            <th>좋아요 <span>↑</span></th>
+                            <th>조회수 <span>↑</span></th>
                         </tr>
                     </thead>
 
