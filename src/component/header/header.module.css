@@ -87,26 +87,35 @@
     padding: 0 17% 0 17%;
     white-space: nowrap;
     
-    background-color: #000000;
-    opacity: 0.75;
+    background-color: #3B3939;
     color: white; 
 }
 
-.leftMenu span {
-    font-size: 17px;
+.navTable {
+    border-collapse: collapse;
+    height: 100%;
+    width: 550px;
     font-weight: 600;
+}
 
+.navTable td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.navTable td:hover {
+    background-color: #ac2323;
+    color: white;
+}
+
+.active {
+    background-color: #ac2323;
+    color: white;
 }
 
 .rightMenu {
     font-size: 17px;
     font-weight: 600;
-}
-
-.hot {
-    text-decoration: none;
-    color: white;
-    margin-right: 13px;
 }
 
 .category {
@@ -119,4 +128,9 @@
     text-decoration: none;
     color: white;
     margin-left: 13px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
 }

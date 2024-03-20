@@ -57,10 +57,21 @@
     padding-right: 20px;
 }
 
-.rankingtable img {
+.imgbox {
     width: 26px;
-    vertical-align: middle;
+    height: 26px;
+    border-radius: 70%;
+    overflow: hidden;
+    background-color: white;
     margin-right: 8px;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+.imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .rankingtable tbody {

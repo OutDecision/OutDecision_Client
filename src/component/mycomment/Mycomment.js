@@ -33,7 +33,7 @@ function Mycomment () {
                 <select className={styles.voteoption}>
                     <option>전체</option>
                     <option>투표중</option>
-                    <option>마감</option>
+                    <option>투표마감</option>
                 </select>
                 <div className={styles.commentlist}>
                     <div className={styles.commentbox}>

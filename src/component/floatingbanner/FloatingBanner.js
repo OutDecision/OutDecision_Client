@@ -9,15 +9,21 @@ return (
       <div className={styles.sideBanner}>
         <div className={styles.rankbar}>Rank</div>
         <div className={styles.ranker}>
-            <img src="/assets/user.png" alt="1st" />
+            <div className={styles.imgbox1}>
+                <img src="/assets/logo.png" alt="1st" />
+            </div>
             <div>1st</div>
         </div>
         <div className={styles.ranker2}>
-            <img src="/assets/user.png" alt="2nd" />
+            <div className={styles.imgbox2} style={{border: "3px solid #a3a3a3"}}>
+                <img src="/assets/user.png" alt="2nd" />
+            </div>
             <div>2nd</div>
         </div>
         <div className={styles.ranker3}>
-            <img src="/assets/user.png" alt="3rd" />
+            <div className={styles.imgbox2} style={{border: "3px solid #cd7f32"}}>
+                <img src="/assets/github.png" alt="3rd" />
+            </div>
             <div>3rd</div>
         </div>
         <table className={styles.list}>

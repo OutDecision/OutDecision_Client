@@ -1,6 +1,6 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Header from "./component/header/Header";
 import Main from "./component/main/Main";
 import Footer from "./component/footer/Footer";
@@ -27,9 +27,14 @@ import HotBoard from "./component/board/HotBoard";
 function App() {
   const [search, setSearch] = useState('');
   const [fullSearch, setFullSearch] = useState('');
+  const location = useLocation();
 
+  useEffect(()=> {
+    setFullSearch('');
+  }, [location]);
+  
   return (
-    <BrowserRouter>
+    <>
       <Header fullSearch={fullSearch} setFullSearch={setFullSearch}/>
       <Routes>
         <Route path="/" element={<Main />}></Route>
@@ -53,7 +58,7 @@ function App() {
         <Route path="/mypage/liked" element={<Myliked />}></Route>           
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 

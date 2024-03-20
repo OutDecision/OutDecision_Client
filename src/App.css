@@ -33,6 +33,7 @@
 .pagination_link {
   transition: all 0.25s;
   padding: 0.2rem 0.6rem;
+  cursor: pointer;
 }
 
 .pagination_active_link {

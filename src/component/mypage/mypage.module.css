@@ -44,6 +44,12 @@
     border-bottom: 2px solid gray;
 }
 
+.unselected:hover {
+    background-color: #C2C2C2;
+    color: white;
+    font-weight: 600;
+}
+
 .main {
     width: 100%;
     margin-top: 50px;
@@ -73,9 +79,21 @@
     margin-bottom: 20px;
 }
 
-.imagebox img {
+.image {
     width: 100px;
-    margin-right: 10px;
+    height: 100px;
+    border-radius: 70%;
+    overflow: hidden;
+    background-color: white;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .namebox div {
@@ -162,9 +180,9 @@
 .commentbox {
     display: flex;
     flex-direction: column;
-    padding: 10px 0 30px 0;
+    padding: 10px 10px 30px 10px;
     height: 30px;
-    border-top: 1px solid lightgray;
+    border-bottom: 1px solid gray;
 }
 
 .commentitem {
@@ -232,14 +250,23 @@
     margin-bottom: 25px;
 }
 
-.profiletable img {
+.profileImage {
     width: 135px;
     height: 135px;
-    border-radius: 10000px;
-    margin-bottom: 15px;
-    padding: 2px;
-    border: 1px solid lightgray;
+    border-radius: 70%;
+    overflow: hidden;
     background-color: #f7f7f7;
+    border: 2px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profiletable img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .editprofile {
@@ -339,4 +366,17 @@
     background-color: #C2C2C2;
     color: white;
     cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link2 {
+    text-decoration: none;
 }

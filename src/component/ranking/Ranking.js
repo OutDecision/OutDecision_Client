@@ -20,73 +20,73 @@ function Ranking () {
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/user.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>패알못</td>
+                            <td><div className={styles.imgbox}><img src="/assets/banner1.png" alt="프로필"/></div>패알못</td>
                             <td>2024-03-03</td>
                             <td>13000000</td>
                         </tr>
@@ -94,7 +94,7 @@ function Ranking () {
                     <tfoot>
                         <tr>
                             <td>384</td>
-                            <td><img src="/assets/user.png" alt="프로필"/>주인공</td>
+                            <td><div className={styles.imgbox}><img src="/assets/cloth.png" alt="프로필"/></div>주인공</td>
                             <td>2024-03-01</td>
                             <td>368</td>
                         </tr>

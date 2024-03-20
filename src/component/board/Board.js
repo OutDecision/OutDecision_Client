@@ -150,7 +150,16 @@ function Board({search, setSearch}) {
                         <tr>
                             <td>1</td>
                             <td>투표중</td>
-                            <td><Link  className="link" to="/board/view/1">안녕하세요</Link></td>
+                            <td><Link className={styles.link} to="/board/view/1">안녕하세요</Link></td>
+                            <td>패알못</td>
+                            <td>18:09</td>
+                            <td>101</td>
+                            <td>233</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>투표중</td>
+                            <td><Link className={styles.link} to="/board/view/1">안녕하세요</Link></td>
                             <td>패알못</td>
                             <td>18:09</td>
                             <td>101</td>

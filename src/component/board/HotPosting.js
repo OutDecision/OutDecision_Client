@@ -145,7 +145,7 @@ function HotPosting({search, setSearch}) {
                         <tr>
                             <td>1</td>
                             <td>투표중</td>
-                            <td><Link  className="link" to="/board/view/1">음식 핫 게시물</Link></td>
+                            <td><Link  className={styles.link} to="/board/view/1">음식 핫 게시물</Link></td>
                             <td>패알못</td>
                             <td>18:09</td>
                             <td>101</td>

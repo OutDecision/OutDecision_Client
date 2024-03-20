@@ -44,6 +44,12 @@
     border-bottom: 2px solid gray;
 }
 
+.unselected:hover {
+    background-color: #C2C2C2;
+    color: white;
+    font-weight: 600;
+}
+
 .main {
     width: 100%;
     margin-top: 50px;

@@ -38,7 +38,7 @@
   .ranker {
     position: absolute;
     top: 35px;
-    left: 93px;
+    left: 88px;
 
     color: white;
     font-size: 17px;
@@ -49,17 +49,29 @@
   }
 
   .ranker img {
-    width: 70px;
+    width: 100%;
+    object-fit: cover;
 
     background-color: gold; /*임시*/
-    border-radius: 100px;
+  }
+
+  .imgbox1 {
+    width: 70px;
+    height: 70px;
+    border-radius: 70%;
+    overflow: hidden;
+    background-color: white;
+    border: 3px solid gold;
+
+    display: flex;
+    align-items: center;
   }
 
   .ranker2 {
     position: absolute;
     top: 55px;
-    left: 33px;
-
+    left: 30px;
+    
     color: lightgray;
     font-size: 14px;
 
@@ -69,10 +81,10 @@
   }
 
   .ranker2 img {
-    width: 50px;
+    width: 100%;
+    object-fit: cover;
 
     background-color: #a3a3a3; /*임시*/
-    border-radius: 100px;
   }
 
   .ranker3 {
@@ -89,10 +101,22 @@
   }
 
   .ranker3 img {
-    width: 50px;
+    width: 100%;
+    object-fit: cover;
 
     background-color: #cd7f32; /*임시*/
     border-radius: 100px;
+  }
+
+  .imgbox2 {
+    width: 48px;
+    height: 48px;
+    border-radius: 70%;
+    overflow: hidden;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
   }
 
   .list {

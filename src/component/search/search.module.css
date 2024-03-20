@@ -208,3 +208,16 @@
     padding-left: 5px;
     background-color: #f7f7f7;
 }
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.posttable tbody tr:hover {
+    background-color: #e6e6e6;
+}
