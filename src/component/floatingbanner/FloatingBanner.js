@@ -10,13 +10,13 @@ return (
         <div className={styles.rankbar}>Rank</div>
         <div className={styles.ranker}>
             <div className={styles.imgbox1}>
-                <img src="/assets/logo.png" alt="1st" />
+                <img src="/assets/github.png" alt="1st" />
             </div>
             <div>1st</div>
         </div>
         <div className={styles.ranker2}>
             <div className={styles.imgbox2} style={{border: "3px solid #a3a3a3"}}>
-                <img src="/assets/user.png" alt="2nd" />
+                <img src="/assets/github.png" alt="2nd" />
             </div>
             <div>2nd</div>
         </div>

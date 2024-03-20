@@ -47,14 +47,14 @@ function Header({fullSearch, setFullSearch}) {
             <div className={styles.navigator}>
                 <table className={styles.navTable}>
                     <tr>
-                        <td className={activeMenu === 'hot' ? styles.active : styles.inactive}><Link to="/board/hot" className={styles.link} onClick={()=> handleMenu('hot')}><div>HOT</div></Link></td>
-                        <td className={activeMenu === 'food' ? styles.active : styles.inactive}><Link to="/board/food" className={styles.link} onClick={()=> handleMenu('food')}><span>음식</span></Link></td>
-                        <td className={activeMenu === 'love' ? styles.active : styles.inactive}><Link to="/board/love" className={styles.link} onClick={()=> handleMenu('love')}><span>연애</span></Link></td>
-                        <td className={activeMenu === 'fashion' ? styles.active : styles.inactive}><Link to="/board/fashion" className={styles.link} onClick={()=> handleMenu('fashion')}><span>패션</span></Link></td>
-                        <td className={activeMenu === 'hobby' ? styles.active : styles.inactive}><Link to="/board/hobby" className={styles.link} onClick={()=> handleMenu('hobby')}><span>취미</span></Link></td>
-                        <td className={activeMenu === 'work' ? styles.active : styles.inactive}><Link to="/board/work" className={styles.link} onClick={()=> handleMenu('work')}><span>취업</span></Link></td>
-                        <td className={activeMenu === 'travle' ? styles.active : styles.inactive}><Link to="/board/travel" className={styles.link} onClick={()=> handleMenu('travel')}><span>여행</span></Link></td>
-                        <td className={activeMenu === 'etc' ? styles.active : styles.inactive}><Link to="/board/etc" className={styles.link} onClick={()=> handleMenu('etc')}><span>기타</span></Link></td>
+                        <td className={activeMenu === 'hot' ? styles.active : ''}><Link to="/board/hot" className={styles.link} onClick={()=> handleMenu('hot')}><div>HOT</div></Link></td>
+                        <td className={activeMenu === 'food' ? styles.active : ''}><Link to="/board/food" className={styles.link} onClick={()=> handleMenu('food')}><span>음식</span></Link></td>
+                        <td className={activeMenu === 'love' ? styles.active : ''}><Link to="/board/love" className={styles.link} onClick={()=> handleMenu('love')}><span>연애</span></Link></td>
+                        <td className={activeMenu === 'fashion' ? styles.active : ''}><Link to="/board/fashion" className={styles.link} onClick={()=> handleMenu('fashion')}><span>패션</span></Link></td>
+                        <td className={activeMenu === 'hobby' ? styles.active : ''}><Link to="/board/hobby" className={styles.link} onClick={()=> handleMenu('hobby')}><span>취미</span></Link></td>
+                        <td className={activeMenu === 'work' ? styles.active : ''}><Link to="/board/work" className={styles.link} onClick={()=> handleMenu('work')}><span>취업</span></Link></td>
+                        <td className={activeMenu === 'travle' ? styles.active : ''}><Link to="/board/travel" className={styles.link} onClick={()=> handleMenu('travel')}><span>여행</span></Link></td>
+                        <td className={activeMenu === 'etc' ? styles.active : ''}><Link to="/board/etc" className={styles.link} onClick={()=> handleMenu('etc')}><span>기타</span></Link></td>
                     </tr>
                 </table>
                 <table className={styles.navTable} style={{width: "180px"}}>
@@ -63,8 +63,8 @@ function Header({fullSearch, setFullSearch}) {
                         <col width="62%"/>
                     </colgroup>
                     <tr>
-                        <td className={activeMenu === 'all' ? styles.active : styles.inactive} ><Link to="/board/all" className={styles.link} onClick={()=> handleMenu('all')}><div>전체</div></Link></td>
-                        <td className={activeMenu === 'ranking' ? styles.active : styles.inactive} ><Link to="/ranking" className={styles.link} onClick={()=> handleMenu('ranking')}><span>포인트랭킹</span></Link></td>
+                        <td className={activeMenu === 'all' ? styles.active : ''} ><Link to="/board/all" className={styles.link} onClick={()=> handleMenu('all')}><div>전체</div></Link></td>
+                        <td className={activeMenu === 'ranking' ? styles.active : ''} ><Link to="/ranking" className={styles.link} onClick={()=> handleMenu('ranking')}><span>포인트랭킹</span></Link></td>
                     </tr>
                 </table>
             </div>

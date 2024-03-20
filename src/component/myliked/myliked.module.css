@@ -76,19 +76,35 @@
     cursor: pointer;
 }
 
-.postlist {
+.posttable {
+    width: 100%;
+    border-collapse: collapse;
     border-bottom: 2px solid gray;
 }
-.postbox {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    height: 30px;
-    border-top: 1px solid lightgray;
-    position: relative;
-}
 
-.postbox span {
+.posttable span {
     color: #ac2323;
     font-weight: 600;
+}
+
+.posttable tr td{
+    border-top: 1px solid gray;
+    padding: 11px;
+}
+
+.posttable tr td:nth-child(2) {
+    text-align: right;
+}
+
+.posttable tr:hover {
+    background-color: #e6e6e6;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline;
 }

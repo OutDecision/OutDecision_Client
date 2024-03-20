@@ -28,16 +28,16 @@ function Myliked () {
                     <option>투표중</option>
                     <option>투표마감</option>
                 </select>
-                <div className={styles.postlist}>
-                    <div className={styles.postbox}>
-                        <div>게시글 제목입니다. <span>(8)</span></div>
-                        <div>패션 | 02-25</div>
-                    </div>
-                    <div className={styles.postbox}>
-                        <div>게시글 제목입니다. <span>(8)</span></div>
-                        <div>패션 | 02-25</div>
-                    </div>
-                </div>
+                <table className={styles.posttable}>
+                    <tr>
+                        <td><Link className={styles.link} to="/board/view/1">안녕하세요 </Link><span>(8)</span></td>
+                        <td>패션 | 02-25</td>
+                    </tr>
+                    <tr>
+                        <td><Link className={styles.link} to="/board/view/1">안녕하세요 </Link><span>(8)</span></td>
+                        <td>패션 | 02-25</td>
+                    </tr>
+                </table>
                 <Pagination
                     pageCount={1}
                     onPageChange={handlePageChange}

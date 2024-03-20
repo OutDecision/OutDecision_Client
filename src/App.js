@@ -1,6 +1,6 @@
 import React, {  useEffect, useState } from "react";
 import './App.css';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from "./component/header/Header";
 import Main from "./component/main/Main";
 import Footer from "./component/footer/Footer";
@@ -32,7 +32,7 @@ function App() {
   useEffect(()=> {
     setFullSearch('');
   }, [location]);
-  
+
   return (
     <>
       <Header fullSearch={fullSearch} setFullSearch={setFullSearch}/>

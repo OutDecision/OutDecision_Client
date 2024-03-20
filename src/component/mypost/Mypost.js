@@ -35,10 +35,10 @@ function Mypost () {
                     <option>투표중</option>
                     <option>투표마감</option>
                 </select>
-                <div className={styles.postlist}>
-                    <div className={styles.postbox}>
-                        <div>게시글 제목입니다. <span>(8)</span></div>
-                        <div>
+                <table className={styles.posttable}>
+                    <tr>
+                        <td><Link className={styles.link} to="/board/view/1">안녕하세요 </Link><span>(8)</span></td>
+                        <td>
                             패션 | 02-25<button onClick={()=>handleButtonClick(1)}>⋮</button>
                             {isOpen && clickedId === 1 ? (
                             <div className={styles.postoption}>
@@ -46,11 +46,11 @@ function Mypost () {
                                 <option>삭제</option>
                             </div>
                             ):<></>}
-                        </div>
-                    </div>
-                    <div className={styles.postbox}>
-                        <div>게시글 제목입니다. <span>(8)</span></div>
-                        <div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><Link className={styles.link} to="/board/view/1">안녕하세요 </Link><span>(8)</span></td>
+                        <td>
                             패션 | 02-25<button onClick={()=>handleButtonClick(2)}>⋮</button>
                             {isOpen && clickedId === 2 ? (
                             <div className={styles.postoption}>
@@ -58,9 +58,9 @@ function Mypost () {
                                 <option>삭제</option>
                             </div>
                             ):<></>}
-                        </div>
-                    </div>
-                </div>
+                        </td>
+                    </tr>
+                </table>
                 <Pagination
                     pageCount={1}
                     onPageChange={handlePageChange}

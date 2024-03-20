@@ -88,15 +88,15 @@ function Mypage () {
                         <div className={styles.postlist}>
                         <div className={styles.plus} onClick={() => navigate('/mypage/posting')}>더보기</div>
                         <div className={styles.post} onMouseOver={() =>handleMouseOver(1)} onMouseOut={handleMouseOut} style={{backgroundColor: hoveredRow === 1?"#e6e6e6":""}}>
-                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다.</Link><span>(8)</span></div>
+                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다. </Link><span>(8)</span></div>
                             <div>패션 | 02-25</div>
                         </div>
                         <div className={styles.post} onMouseOver={() =>handleMouseOver(2)} onMouseOut={handleMouseOut} style={{backgroundColor: hoveredRow === 2?"#e6e6e6":""}}>
-                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다.</Link><span>(8)</span></div>
+                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다. </Link><span>(8)</span></div>
                             <div>패션 | 02-25</div>
                         </div>
                         <div className={styles.post} onMouseOver={() =>handleMouseOver(3)} onMouseOut={handleMouseOut} style={{backgroundColor: hoveredRow === 3?"#e6e6e6":""}}>
-                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다.</Link><span>(8)</span></div>
+                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다. </Link><span>(8)</span></div>
                             <div>패션 | 02-25</div>
                         </div>
                     </div>
@@ -137,15 +137,15 @@ function Mypage () {
                         <div className={styles.postlist}>
                         <div className={styles.plus} onClick={() => navigate('/mypage/liked')}>더보기</div>
                         <div className={styles.post} onMouseOver={() =>handleMouseOver(1)} onMouseOut={handleMouseOut} style={{backgroundColor: hoveredRow === 1?"#e6e6e6":""}}>
-                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다.</Link><span>(2)</span></div>
+                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다. </Link><span>(2)</span></div>
                             <div>패션 | 02-25</div>
                         </div>
                         <div className={styles.post} onMouseOver={() =>handleMouseOver(2)} onMouseOut={handleMouseOut} style={{backgroundColor: hoveredRow === 2?"#e6e6e6":""}}>
-                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다.</Link><span>(7)</span></div>
+                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다. </Link><span>(7)</span></div>
                             <div>패션 | 02-25</div>
                         </div>
                         <div className={styles.post} onMouseOver={() =>handleMouseOver(3)} onMouseOut={handleMouseOut} style={{backgroundColor: hoveredRow === 3?"#e6e6e6":""}}>
-                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다.</Link><span>(1)</span></div>
+                            <div><Link className={styles.link} to="/board/view/1">게시글 제목입니다. </Link><span>(1)</span></div>
                             <div>패션 | 02-25</div>
                         </div>
                     </div>
