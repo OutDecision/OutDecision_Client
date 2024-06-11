@@ -1,0 +1,55 @@
+.container {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px 20px;
+}
+.post_wrap {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 기본 그림자 설정 */
+    transition: all 0.2s ease; /* hover 시 애니메이션 속도 설정 */
+  }
+  
+.post_wrap:hover {
+    transform: translate(-5px, -5px); /* hover 시 왼쪽 및 위쪽으로 5px 이동 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* hover 시 그림자 크기 및 투명도 증가 */
+}
+
+@media (min-width: 1080px) {
+    .post_wrap {
+        flex: 0 0 32%; /*4개씩 23%*/
+        padding: 10px 15px 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        min-height: 430px;
+        position: relative;
+    }
+}
+@media (min-width: 576px) and ( max-width: 1079px) {
+    .post_wrap {
+        flex: 0 0 47%;
+        padding: 10px 15px 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        min-height: 430px;
+        position: relative;
+    }
+}
+@media (max-width: 575px) {
+    .post_wrap {
+        flex: 0 0 100%;
+        padding: 10px 15px 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        min-height: 430px;
+        position: relative;
+    }
+
+}

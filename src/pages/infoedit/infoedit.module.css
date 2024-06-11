@@ -1,0 +1,621 @@
+.container {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1080px) {
+    .pc_infoedit {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 35px 0 60px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .mobile_infoedit {
+        display: none;
+    }
+
+    .sidebar_wrap {
+        width: 220px;
+        margin-right: 60px;
+    }
+
+    .content {
+        float: left;
+        width: calc(100% - 280px);
+        padding: 0;
+        margin: 0;
+    }
+
+    .main {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .edit {
+        font-size: 30px;
+        font-weight: 600;
+        color: #ac2323;
+        padding-bottom: 8px;
+    }
+
+    .required {
+        font-size: 20px;
+        color: #ac2323;
+        font-weight: 600;
+    }
+
+    .editform {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #f7f7f7;
+        margin-top: 10px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .editform span {
+        color: #ac2323;
+        font-weight: 600;
+    }
+
+    .imagebox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .filecontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 30px;
+        padding: 10px;
+    }
+
+    .filebox,
+    .filebox2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .filebox label,
+    .filebox2 button {
+        cursor: pointer;
+        width: 45px;
+        height: 25px;
+        background-color: lightgray;
+        border-radius: 8px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .filebox input {
+        display: none;
+    }
+
+    .edittable {
+        border-collapse: separate;
+        border-spacing: 20px 25px;
+        font-size: 20px;
+    }
+
+    .edittable tr td input {
+        width: 200px;
+        height: 40px;
+        font-size: 17px;
+        border-radius: 8px;
+        padding-left: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .edittable td:nth-child(1) {
+        width: 30%;
+    }
+
+    .edittable td:nth-child(2) {
+        padding-left: 20px;
+    }
+
+    .edittable tr:nth-child(6) button {
+        width: 120px;
+        height: 35px;
+        font-size: 15px;
+        background-color: white;
+        border: 1px solid #5a5a5a;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .buttonbox {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttonbox button {
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .buttonbox button:first-child {
+        background-color: #ac2323;
+    }
+
+    .buttonbox button:last-child {
+        background-color: #C2C2C2;
+    }
+
+    .pwdmodal {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+        height: 300px;
+        background-color: #f7f7f7;
+        border-radius: 12px;
+        border: 1px solid gray;
+        padding: 0;
+    }
+
+    .modalheader {
+        height: 40px;
+        background-color: #ac2323;
+        color: white;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modalbody {
+        padding: 15px;
+    }
+
+    .passwordtable {
+        border-collapse: separate;
+        border-spacing: 10px 15px;
+        font-size: 10px;
+    }
+
+    .passwordtable tr td input {
+        width: 300px;
+        height: 30px;
+    }
+
+    .buttonbox2 {
+        padding-top: 20px;
+        margin-top: 15px;
+        border-top: 1px solid gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonbox2 button {
+        width: 80px;
+        height: 30px;
+        font-size: 15px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .buttonbox2 button:first-child {
+        background-color: #ac2323;
+        color: white;
+    }
+
+    .buttonbox2 button:last-child {
+        background-color: #C2C2C2;
+    }
+
+    .deletebox {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .deletebox button {
+        height: 40px;
+        text-decoration-line: underline;
+        font-size: 1.1rem
+    }
+
+    .deletemodal {
+        width: 250px;
+        position: fixed;
+        top: 45%;
+        left: 57%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 1px solid black;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 1000;
+    }
+
+    .deletemodal p {
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .deletemodal button {
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+    }
+
+    .deletemodal button:nth-child(2) {
+        background-color: #ac2323;
+        margin-bottom: 10px;
+    }
+
+    .deletemodal button:nth-child(3) {
+        background-color: #C2C2C2;
+    }
+}
+
+@media (max-width: 1079px) {
+    .pc_infoedit {
+        display: none;
+    }
+
+    .mobile_infoedit {
+        display: block;
+    }
+
+    .topbar_wrap {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .content {
+        padding: 0 20px;
+    }
+
+    .main {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .editwrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .edit {
+        font-size: 30px;
+        font-weight: 600;
+        color: #ac2323;
+        padding-bottom: 8px;
+    }
+
+    .required {
+        font-size: 20px;
+        color: #ac2323;
+        font-weight: 600;
+    }
+
+    .editform {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #f7f7f7;
+        margin-top: 10px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .editform span {
+        color: #ac2323;
+        font-weight: 600;
+    }
+
+    .imagebox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    .image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .filecontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filebox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .filebox2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .filebox label,
+    .filebox2 button {
+        cursor: pointer;
+        width: 50px;
+        height: 30px;
+        background-color: lightgray;
+        border-radius: 8px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .filebox input {
+        display: none;
+    }
+
+    .edittable {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .edittable td {
+        padding: 10px;
+    }
+
+    .edittable tr td input {
+        width: calc(100% - 20px);
+        height: 40px;
+        font-size: 17px;
+        border-radius: 8px;
+        padding-left: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .edittable td:nth-child(1) {
+        vertical-align: middle;
+        width: 40%;
+        padding-left: 20px;
+    }
+
+    .edittable td:nth-child(2) {
+        width: 95%;
+    }
+
+    .edittable tr:nth-child(5) button {
+        width: 120px;
+        height: 35px;
+        font-size: 15px;
+        background-color: white;
+        border: 1px solid #5a5a5a;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .buttonbox {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .buttonbox button:nth-child(1) {
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #ac2323;
+        color: white;
+    }
+
+    .buttonbox button:nth-child(2) {
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #C2C2C2;
+        color: white;
+    }
+
+    .pwdmodal {
+        position: fixed;
+        top: 160px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 300px;
+        background-color: #f7f7f7;
+        border-radius: 12px;
+        border: 1px solid gray;
+        padding: 0;
+    }
+
+    .modalheader {
+        height: 40px;
+        background-color: #ac2323;
+        color: white;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modalbody {
+        padding: 15px;
+    }
+
+    .passwordtable {
+        border-collapse: separate;
+        border-spacing: 10px 15px;
+        font-size: 13px;
+    }
+
+    .passwordtable tr td input {
+        width: 100%;
+        height: 30px;
+    }
+
+    .buttonbox2 {
+        padding-top: 20px;
+        margin-top: 15px;
+        border-top: 1px solid gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonbox2 button:nth-child(1) {
+        width: 80px;
+        height: 30px;
+        font-size: 15px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #ac2323;
+        color: white;
+        cursor: pointer;
+    }
+
+    .buttonbox2 button:nth-child(2) {
+        width: 80px;
+        height: 30px;
+        font-size: 15px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #C2C2C2;
+        color: white;
+    }
+
+    .deletebox {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+
+    .deletebox button {
+        height: 40px;
+        text-decoration-line: underline;
+        font-size: 1.0rem
+    }
+
+    .deletemodal {
+        width: 250px;
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 1px solid black;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 1000;
+    }
+
+    .deletemodal p {
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .deletemodal button {
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+    }
+
+    .deletemodal button:nth-child(2) {
+        background-color: #ac2323;
+        margin-bottom: 10px;
+    }
+
+    .deletemodal button:nth-child(3) {
+        background-color: #C2C2C2;
+    }
+}

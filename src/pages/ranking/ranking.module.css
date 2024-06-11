@@ -1,0 +1,426 @@
+.container {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1080px) {
+    .pc_ranking {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .mobile_ranking {
+        display: none;
+    }
+
+    .decoration {
+        font-weight: 1000;
+        font-size: 33px;
+    }
+
+    .rankingtitle {
+        font-size: 30px;
+        font-weight: 600;
+        color: #ac2323;
+        max-width: 700px;
+        margin: 20px auto 15px;
+    }
+
+    .rankingdescription {
+        font-size: 18px;
+        font-weight: 600;
+        color: #343434;
+        text-align: center;
+    }
+
+    .rankingtable {
+        border-collapse: collapse;
+        min-width: 700px;
+        margin: 25px auto 50px;
+    }
+
+    .rankinghead {
+        min-width: 700px;
+        display: table;
+    }
+
+    .rankingtable th {
+        border-top: 2px solid black;
+        border-bottom: 1px solid black;
+        padding: 10px 0;
+        background-color: #ac2323;
+        color: white;
+    }
+
+    .rankingtable th:nth-child(2) {
+        padding-left: 10px;
+    }
+
+    .rankingtable th:nth-child(3) {
+        padding-left: 0px;
+    }
+
+    .rankingtable td {
+        padding: 8px 5px;
+        border-bottom: 1px solid lightgray;
+        text-align: center;
+        position: relative;
+    }
+
+    .profile {
+        width: 35px;
+        height: 35px;
+        background-color: white;
+        display: flex;
+        float: left;
+        position: relative;
+        align-items: center;
+        margin-right: 20px;
+        margin-top: 0px !important;
+    }
+
+    .profile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 70%;
+        z-index: 1;
+        background-color: white;
+        border: 1px solid lightgrey;
+    }
+
+    .rank_wrap {
+        position: relative;
+    }
+
+    .rank_wrap.first .rank {
+        color: gold;
+    }
+
+    .rank_wrap.second .rank {
+        color: silver;
+    }
+
+    .rank_wrap.third .rank {
+        color: #CD7F32;
+    }
+
+    .rank {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .left_wing {
+        margin-right: 4px;
+    }
+
+    .right_wing {
+        margin-left: 4px;
+        transform: scaleX(-1);
+    }
+
+    .rankingtable td:nth-child(2) {
+        text-align: left;
+        padding-left: 30px;
+        font-size: 20px;
+    }
+
+    .rankingtable td:nth-child(3) {
+        color: #ac2323;
+        font-weight: 600;
+    }
+
+    .rankingtable tbody {
+        display: block;
+        max-height: 450px;
+        overflow-y: scroll;
+    }
+
+    .rankingtable tbody tr {
+        display: table;
+        width: 100%;
+    }
+
+    .rankingtable th:nth-child(1),
+    .rankingtable td:nth-child(1) {
+        width: 10%;
+    }
+
+    .rankingtable th:nth-child(2),
+    .rankingtable td:nth-child(2) {
+        width: 74%;
+    }
+
+    .rankingtable th:nth-child(3) {
+        width: 16%;
+    }
+
+    .rankingtable td:nth-child(3) {
+        width: 13%;
+    }
+
+    .rankingtable tfoot {
+        display: block;
+        border: 2px solid #ac2323;
+        unicode-bidi: isolate;
+    }
+
+    .rankingtable tfoot tr {
+        display: table;
+        width: 99%;
+    }
+
+    .title {
+        font-size: 15px;
+        color: blue;
+    }
+}
+
+@media (max-width: 1079px) {
+    .pc_ranking {
+        display: none;
+    }
+
+    .mobile_ranking {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .wrap {
+        float: left;
+        width: 100%;
+
+    }
+
+    .containerinner {
+        float: left;
+        width: 100%;
+        height: 100%;
+    }
+
+    .divinner {
+        position: relative;
+        padding: 0 20px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .contentswrap {
+        width: 100%;
+        float: left;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    .decoration {
+        font-weight: 900;
+        font-size: 25px;
+    }
+
+    .rankingtitle {
+        font-size: 20px;
+        font-weight: 600;
+        color: #ac2323;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .rankingdescription {
+        font-size: 17px;
+        font-weight: 600;
+        color: #343434;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .ranktablewrap {
+        width: 100%;
+        float: left;
+        height: 100%;
+    }
+
+    .ranktable {
+        width: 100%;
+        height: 100%;
+        float: left;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 50px;
+    }
+
+    .rankhead {
+        display: table;
+        width: 100%;
+    }
+
+    .ranktable tr th {
+        font-weight: bold;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        background-color: #ac2323;
+        display: table-cell;
+        vertical-align: inherit;
+        unicode-bidi: isolate;
+    }
+
+    .ranktable tbody {
+        unicode-bidi: isolate;
+        display: block;
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+
+    .ranktable tbody tr {
+        display: table;
+        width: 100%;
+    }
+
+    .ranktable tfoot {
+        display: block;
+        unicode-bidi: isolate;
+        border: 3px solid #ac2323;
+        unicode-bidi: isolate;
+    }
+
+    .ranktable tfoot tr {
+        display: table;
+        width: 100%;
+    }
+
+    .ranktable tfoot td:nth-child(3) {
+        padding-left: 10px;
+    }
+
+    .ranktable td {
+        padding: 8px 5px;
+        border-bottom: 1px solid lightgray;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.911);
+        position: relative;
+    }
+
+    .profile {
+        width: 37px;
+        height: 37px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 70%;
+        z-index: 1;
+        background-color: white;
+        border: 1px solid lightgrey;
+    }
+
+    .rank_wrap {
+        position: relative;
+    }
+
+    .rank_wrap.first .rank {
+        color: gold;
+    }
+
+    .rank_wrap.second .rank {
+        color: silver;
+    }
+
+    .rank_wrap.third .rank {
+        color: #CD7F32;
+    }
+
+    .rank {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left_wing {
+        margin-right: 4px;
+    }
+
+    .right_wing {
+        margin-left: 4px;
+        transform: scaleX(-1);
+    }
+
+    .nickname {
+        font-size: 18px;
+    }
+
+    .ranktable td:nth-child(2) {
+        text-align: left;
+        padding-left: 15px;
+        font-size: 20px;
+    }
+
+    .ranktable th:nth-child(1),
+    .ranktable td:nth-child(1) {
+        width: 15%;
+    }
+
+    .ranktable th:nth-child(2),
+    .ranktable td:nth-child(2) {
+        width: 65%;
+    }
+
+    .ranktable th:nth-child(3) {
+        width: 20%;
+    }
+
+    .ranktable td:nth-child(3) {
+        width: 20%;
+        color: #ac2323;
+        font-weight: 600;
+    }
+
+    .nickname_wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .title_wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .title {
+        font-size: 13px;
+        color: blue;
+    }
+
+    .blurred {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 8ch;
+        position: relative;
+    }
+
+    .blurred::after {
+        content: attr(data-fullname);
+        position: absolute;
+        left: 4ch;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: transparent;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+}
